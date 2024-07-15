@@ -1,8 +1,6 @@
-"use client"
-
 export default function Feed() {
   return (
-    <div className="grid grid-cols-3  border-t border-zinc-300 divide-x divide-zinc-300">
+    <div className="grid grid-cols-3  border-t  divide-x">
       <div className="flex flex-col">
         <div className="flex flex-col gap-7 p-5 border-b">
           <div className="font-bold">NM 🔉 CHANNEL</div>
