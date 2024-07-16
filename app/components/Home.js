@@ -25,7 +25,7 @@ export default function Home() {
         </div>
       </div>
       <Logo />
-      <div className="flex justify-center gap-5 p-5 mb-10 font-[400] text-sm">
+      <div className="flex justify-center gap-5 p-5 mb-10 font-[400] ">
         <div className="flex gap-3 bg-zinc-100 p-1 rounded cursor-pointer">
           <div
             className={
@@ -73,7 +73,12 @@ export default function Home() {
       })()}
       <div className="border-t p-10 flex flex-col gap-7 items-center justify-center">
         <div className="font-bold text-xl">NM</div>
-        <div className="flex gap-5 ">
+        <div className="flex gap-5 uppercase">
+          <div>About</div>
+          <div>Contact</div>
+          <div>NM Studio</div>
+        </div>
+        <div className="flex gap-5 text-sm">
           <div>PATREON</div>
           <div>SUBSTACK</div>
           <div>CHANNEL</div>
@@ -82,7 +87,7 @@ export default function Home() {
           <div>TW</div>
           <div>SC</div>
         </div>
-        <div>© 2024 NEW MODELS</div>
+        <div className="text-[10px]">© 2024 NEW MODELS</div>
       </div>
     </>
   )

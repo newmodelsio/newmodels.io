@@ -14,7 +14,7 @@ export default function Section({ section }) {
     >
       <div className="">
         <div className="font-bold">{section.title}</div>
-        <div className="text-zinc-400 font-bold">{section.description}</div>
+        {/* <div>{section.description}</div> */}
         <div dangerouslySetInnerHTML={{ __html: section.text }} />
       </div>
       {section.posts && (

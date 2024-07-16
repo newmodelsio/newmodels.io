@@ -1,7 +1,7 @@
 import "./globals.css"
 
 export const metadata = {
-  title: "NEW MODELS",
+  title: "NEW MODELS 2024®",
   description:
     "NEW MODELS is a media channel and community addressing the emergent effects of networked technology on culture.",
 }
