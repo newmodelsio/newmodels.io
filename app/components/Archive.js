@@ -10,9 +10,9 @@ export default function Archive() {
           placeholder="Search New Models"
         />
       </div>
-      <div className="grid grid-cols-5 gap-5 w-full p-5">
+      <div className="grid grid-cols-5 gap-5 w-full p-5 uppercase text-sm">
         <div className="flex flex-col border-r">
-          <div className="font-bold">Year</div>
+          <div className="font-bold mb-2">Year</div>
           <div>2024</div>
           <div>2023</div>
           <div>2022</div>
@@ -22,21 +22,27 @@ export default function Archive() {
           <div>2018</div>
         </div>
         <div className="flex flex-col border-r">
-          <div className="font-bold">Category</div>
-          <div>Podcast</div>
-          <div>Editorial</div>
-          <div>Project</div>
-          <div>TopSoil</div>
+          <div className="font-bold mb-2">Category</div>
+          <div>NM Podcast</div>
+          <div>NM Editorial</div>
+          <div>NM Projects</div>
+          <div>NM TopSoil</div>
+          <div>NM DISPATCH</div>
+          <div>NM TV</div>
+          <div>NM LECTURES</div>
+          <div>NM SPECIAL REPORTS</div>
+          <div>NM SHORTS</div>
+          <div>NM GREENROOM</div>
           <div>Channel</div>
         </div>
         <div className="flex flex-col border-r">
-          <div className="font-bold">Media</div>
-          <div>Text</div>
+          <div className="font-bold mb-2">Type</div>
+          <div>Article</div>
           <div>Video</div>
           <div>Audio</div>
         </div>
         <div className="flex flex-col border-r">
-          <div className="font-bold">Theme</div>
+          <div className="font-bold mb-2">Theme</div>
           <div>Culture</div>
           <div>Environment</div>
           <div>Economy</div>
@@ -45,7 +51,7 @@ export default function Archive() {
           <div>Society</div>
         </div>
         <div className="flex flex-col">
-          <div className="font-bold">Keyword</div>
+          <div className="font-bold mb-2">Keyword</div>
           <div>community networks</div>
           <div>counterculture</div>
           <div>critical theory</div>

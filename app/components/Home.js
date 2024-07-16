@@ -25,8 +25,8 @@ export default function Home() {
         </div>
       </div>
       <Logo />
-      <div className="flex justify-center gap-5 p-5 mb-10 font-[500] text-sm">
-        <div className="flex gap-3 bg-zinc-100 p-1 rounded tracking-[0.02em] cursor-pointer">
+      <div className="flex justify-center gap-5 p-5 mb-10 font-[400] text-sm">
+        <div className="flex gap-3 bg-zinc-100 p-1 rounded cursor-pointer">
           <div
             className={
               toggle == "Clear"
@@ -59,7 +59,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {(() => {
         switch (toggle) {
           case "Clear":
@@ -72,6 +71,19 @@ export default function Home() {
             return null
         }
       })()}
+      <div className="border-t p-10 flex flex-col gap-7 items-center justify-center">
+        <div className="font-bold text-xl">NM</div>
+        <div className="flex gap-5 ">
+          <div>PATREON</div>
+          <div>SUBSTACK</div>
+          <div>CHANNEL</div>
+          <div>YT</div>
+          <div>ID</div>
+          <div>TW</div>
+          <div>SC</div>
+        </div>
+        <div>© 2024 NEW MODELS</div>
+      </div>
     </>
   )
 }
