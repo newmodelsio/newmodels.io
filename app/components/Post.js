@@ -13,7 +13,7 @@ export default function Post({ title, src }) {
   return (
     <div key={title} className="hover:underline cursor-pointer">
       {random == 2 && (
-        <img src={src} className="max-w-[125px] max-h-[100px] mb-2" alt="" />
+        <img src={src} className="max-w-[125px] max-h-[125px] mb-1" alt="" />
       )}
       <div dangerouslySetInnerHTML={{ __html: title }} />
     </div>

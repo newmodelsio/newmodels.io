@@ -19,7 +19,7 @@ export default function Archive() {
           </svg>
         </div>
       </div>
-      <div className="grid  grid-cols-3 md:grid-cols-5 gap-5 w-full p-5 uppercase text-sm">
+      <div className="grid  grid-cols-2 md:grid-cols-4 gap-5 w-full p-5 uppercase text-sm">
         <div className="flex flex-col">
           <div className="font-bold mb-2">Year</div>
           <div>2024</div>
@@ -58,13 +58,7 @@ export default function Archive() {
           <div>Health</div>
           <div>Politics</div>
           <div>Society</div>
-        </div>
-        <div className="flex flex-col">
-          <div className="font-bold mb-2">Keyword</div>
-          <div>community networks</div>
-          <div>counterculture</div>
-          <div>critical theory</div>
-          <div>web3</div>
+          <div>Technology</div>
         </div>
       </div>
     </div>

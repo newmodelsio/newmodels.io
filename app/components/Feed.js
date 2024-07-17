@@ -4,7 +4,7 @@ import Section from "./Section"
 export default function Feed() {
   return (
     <>
-      <div className="grid md:grid-cols-3  border-t  divide-x">
+      <div className="grid md:grid-cols-3 divide-x">
         <div className="flex flex-col">
           {feed
             .filter((section) => section.col == 1)

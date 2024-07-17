@@ -86,6 +86,8 @@ export default function Home() {
           <div>ID</div>
           <div>TW</div>
           <div>SC</div>
+          <div>Apple</div>
+          <div>Spotify</div>
         </div>
         <div className="text-[10px]">© 2024 NEW MODELS</div>
       </div>
