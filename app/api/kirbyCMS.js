@@ -1,10 +1,5 @@
-export async function getData() {
+export async function kirbyCMS() {
   const response = await fetch("https://newmodels.io/json")
   const jsonData = await response.json()
   return jsonData
 }
-
-// export default async function handler() {
-//   const jsonData = await getData()
-//   res.status(200).json(jsonData)
-// }

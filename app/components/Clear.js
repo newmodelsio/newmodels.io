@@ -1,7 +1,7 @@
 import feed from "../nm.json"
 import Section from "./Section"
 
-export default function Feed() {
+export default function Clear() {
   return (
     <>
       <div className="grid md:grid-cols-3 divide-x">
