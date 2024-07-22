@@ -4,8 +4,6 @@ import { useState, useEffect } from "react"
 import Linkify from "../utils/linkify"
 
 export default function DiscordPost({ post }) {
-  console.log(post)
-
   return (
     <>
       <div className="flex flex-col gap-3 text-lg">
