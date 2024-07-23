@@ -1,31 +1,19 @@
-// "use client"
-import ThemeProvider from "../theme-provider"
+"use client"
 
 import Clear from "../components/Clear"
-// import Dark from "../components/Dark"
-import Nav from "../components/Nav"
-
+import Dark from "../components/Dark"
 import Toggle from "../components/Toggle"
-// import { useState } from "react"
+import Nav from "../components/Nav"
+import { useState } from "react"
 
-export default function Aggregate() {
-  // const { value } = ThemeProvider
-  // console.log(value)
+export default function Aggregate({ columns }) {
+  const [toggle, setToggle] = useState("Clear")
 
   return (
     <>
-      <Toggle />
+      <Toggle toggle={toggle} setToggle={setToggle} />
       <Nav />
-
-      {/* {toggle == "Clear" ? (
-        <Clear data={data[0]} />
-      ) : (
-        <Dark
-          topLinks={data[1]}
-          discordReplies={data[2]}
-          bulletinBoard={data[3]}
-        />
-      )} */}
+      <div>{toggle == "Clear" ? <Clear columns={columns} /> : <Dark />}</div>
     </>
   )
 }

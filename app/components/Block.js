@@ -43,19 +43,57 @@ export default function Block({ block }) {
                 <div className="flex flex-wrap">
                   <a href={block.link} target="_blank">
                     <Image src={block.src} alt="" width={300} height={300} />
+                    <div
+                      className="my-2"
+                      dangerouslySetInnerHTML={{ __html: block.caption }}
+                    ></div>
                   </a>
                 </div>
               )
             case "post":
               return (
                 <div className="mb-5">
-                  <a href={block.link} target="_blank">
+                  <a href={block.url} target="_blank">
                     <div dangerouslySetInnerHTML={{ __html: block.text }}></div>
+                  </a>
+                </div>
+              )
+            case "product":
+              return (
+                <div className="mb-5">
+                  <a href={block.url} target="_blank">
+                    <Image
+                      src={block.thumbnail}
+                      alt=""
+                      width={300}
+                      height={300}
+                    />
+                    <div
+                      className="my-2"
+                      dangerouslySetInnerHTML={{ __html: block.title }}
+                    ></div>
                   </a>
                 </div>
               )
             case "hr":
               return <hr className="mb-5" />
+            case "issue":
+              return (
+                <div>
+                  <div
+                    className="my-2"
+                    dangerouslySetInnerHTML={{ __html: block.issue }}
+                  ></div>
+                  {block.articles.map((issue, i) => (
+                    <a href={issue.url} key={issue.id} target="_blank">
+                      <div
+                        className="my-2"
+                        dangerouslySetInnerHTML={{ __html: issue.title }}
+                      ></div>
+                    </a>
+                  ))}
+                </div>
+              )
             default:
               return null
           }

@@ -1,3 +1,5 @@
+"use server"
+
 const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN
 
 export async function getDiscord(channelID) {
@@ -12,6 +14,7 @@ export async function getDiscord(channelID) {
       }
     )
     const data = await response.json()
+    console.log(data)
     return data
   } catch (error) {
     console.log(error)

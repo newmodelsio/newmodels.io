@@ -1,5 +1,7 @@
+"use server"
+
 export async function getKirby() {
-  const response = await fetch("https://newmodels.io/json")
+  const response = await fetch("https://newmodels.io/site.json")
   const jsonData = await response.json()
   return jsonData
 }

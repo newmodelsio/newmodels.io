@@ -1,4 +1,5 @@
 import "./globals.css"
+import "./modifiers.css"
 
 import ThemeProvider from "./theme-provider"
 

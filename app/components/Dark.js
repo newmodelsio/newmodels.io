@@ -1,8 +1,33 @@
 import DiscordPost from "../components/DiscordPost"
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
 import { getDiscord } from "../api/discord"
 
-export default function Dark({ topLinks, discordReplies, bulletinBoard }) {
+export default function Dark() {
+  const [topLinks, setTopLinks] = useState([])
+  const [discordReplies, setDiscordReplies] = useState([])
+  const [bulletinBoard, setBulletinBoard] = useState([])
+
+  const getTopLinks = async () => {
+    const response = await getDiscord("834797161081602088")
+    setTopLinks(response)
+  }
+
+  const getDiscordReplies = async () => {
+    const response = await getDiscord("844287069345939506")
+    setDiscordReplies(response)
+  }
+
+  const getBulletinBoard = async () => {
+    const response = await getDiscord("932043003055456336")
+    setBulletinBoard(response)
+  }
+
+  useEffect(() => {
+    getTopLinks()
+    getDiscordReplies()
+    getBulletinBoard()
+  }, [])
+
   return (
     <>
       <div className="grid md:grid-cols-3 divide-x bg-[#36393f] text-white font-discord">
