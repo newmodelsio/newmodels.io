@@ -9,6 +9,10 @@ export default async function Page() {
   const response = await fetch(`https://newmodels.io/search.json`)
   const results = await response.json()
 
+  const ordered = results.archive.sort(function (a, b) {
+    return new Date(b.published) - new Date(a.published)
+  })
+
   return (
     <>
       <div className="flex justify-center p-10">
@@ -19,7 +23,7 @@ export default async function Page() {
       <Archive />
       <Filters results={results} />
       <div className="p-5 columns-3 gap-5">
-        {results.archive.map((result) => (
+        {ordered.map((result) => (
           <div
             key={result.slug}
             data-slug={result.slug}
@@ -27,9 +31,7 @@ export default async function Page() {
           >
             <a href={result.link} target="_blank">
               <div className="text-xs">{result.published}</div>
-              <pre className="text-xs text-red-500 overflow-hidden">
-                {result.slug}
-              </pre>
+              <div className="text-xs">{result.id}</div>
               <div dangerouslySetInnerHTML={{ __html: result.title }}></div>
             </a>
           </div>

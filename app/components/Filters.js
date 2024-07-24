@@ -4,15 +4,6 @@ export default function Filters({ results }) {
   return (
     <div className="p-5 flex gap-5">
       <div>
-        Unknown (
-        {
-          results.archive.filter(function (str) {
-            return str.published == "Unknown"
-          }).length
-        }
-        )
-      </div>
-      <div>
         2024 (
         {
           results.archive.filter(function (str) {

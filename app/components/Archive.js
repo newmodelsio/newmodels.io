@@ -12,8 +12,8 @@ export default function Archive() {
           />
           <svg id="search" className="w-[20px] opacity-40" viewBox="0 0 24 24">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M16.5 11a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Zm-.797 5.61a8 8 0 1 1 .948-1.163l5.331 4.479-.964 1.148-5.315-4.464Z"
             ></path>
           </svg>
