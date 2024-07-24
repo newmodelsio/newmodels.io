@@ -16,6 +16,9 @@ export default function Nav({ navItems, subNavItems }) {
             {item.title}
           </Link>
         ))}
+        <Link href="/search" className="whitespace-nowrap">
+          Search
+        </Link>
       </div>
     </div>
   )

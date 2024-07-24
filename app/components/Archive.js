@@ -2,11 +2,11 @@
 
 export default function Archive() {
   return (
-    <div className="w-full border-t border-zin2-300 divide-x divide-zinc-300">
-      <div className="flex justify-center border-b">
+    <div className="w-full border-b border-zin2-300 divide-x divide-zinc-300">
+      <div className="flex justify-center">
         <div className="flex w-full max-w-lg px-3 border-x">
           <input
-            className="p-5 w-full  text-center"
+            className="p-5 w-full text-center uppercase text-sm"
             type="text"
             placeholder="Search New Models"
           />
@@ -19,7 +19,7 @@ export default function Archive() {
           </svg>
         </div>
       </div>
-      <div className="grid  grid-cols-2 md:grid-cols-4 gap-5 w-full p-5 uppercase text-sm">
+      {/* <div className="grid  grid-cols-3 gap-5 w-full p-5 uppercase text-sm">
         <div className="flex flex-col">
           <div className="font-bold mb-2">Year</div>
           <div>2024</div>
@@ -50,17 +50,7 @@ export default function Archive() {
           <div>Video</div>
           <div>Audio</div>
         </div>
-        <div className="flex flex-col">
-          <div className="font-bold mb-2">Theme</div>
-          <div>Culture</div>
-          <div>Environment</div>
-          <div>Economy</div>
-          <div>Health</div>
-          <div>Politics</div>
-          <div>Society</div>
-          <div>Technology</div>
-        </div>
-      </div>
+      </div> */}
     </div>
   )
 }
