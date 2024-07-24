@@ -1,5 +1,3 @@
-"use client"
-
 export default function Toggle({ toggle, setToggle }) {
   return (
     <div className="flex justify-center gap-5 p-5 mb-10 font-[400]">

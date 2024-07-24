@@ -14,7 +14,11 @@ export default async function Page({ params }) {
         <div className="w-[300px] h-[100px] bg-black"></div>
       </div>
       <Logo />
-      <Aggregate columns={columns} />
+      <Aggregate
+        columns={columns}
+        navItems={columns.navItems}
+        subNavItems={columns.subNavItems}
+      />
       <Footer />
     </>
   )

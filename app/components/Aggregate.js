@@ -6,14 +6,14 @@ import Toggle from "../components/Toggle"
 import Nav from "../components/Nav"
 import { useState } from "react"
 
-export default function Aggregate({ columns }) {
+export default function Aggregate({ columns, navItems, subNavItems }) {
   const [toggle, setToggle] = useState("Clear")
 
   return (
     <>
       <Toggle toggle={toggle} setToggle={setToggle} />
-      <Nav />
-      <div>{toggle == "Clear" ? <Clear columns={columns} /> : <Dark />}</div>
+      <Nav navItems={navItems} subNavItems={subNavItems} />
+      {toggle == "Clear" ? <Clear columns={columns} /> : <Dark />}
     </>
   )
 }

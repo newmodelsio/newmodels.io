@@ -10,26 +10,34 @@ export default function DiscordPost({ post }) {
         <div className="postContent text-zinc-200  overflow-hidden">
           <div dangerouslySetInnerHTML={{ __html: Linkify(post.content) }} />
         </div>
-        {post.embeds.map((embed) => (
-          <div
-            key={embed.title}
-            className=" bg-[#2b2d31] rounded border-l-4 p-4 border-zinc-900"
-          >
-            <a href={embed.url} className="flex flex-col gap-3" target="_blank">
-              <div className="text-[#1daaf9] font-bold">{embed.title}</div>
-              <div className="text-zinc-300">{embed.description}</div>
-              {embed.thumbnail && (
-                <div className="rounded overflow-hidden">
-                  <img src={embed.thumbnail.url} alt="" />
-                </div>
-              )}
-            </a>
-          </div>
-        ))}
+        {post.embeds && (
+          <>
+            {post.embeds.map((embed, index) => (
+              <div
+                key={"embed" + index}
+                className=" bg-[#2b2d31] rounded border-l-4 p-4 border-zinc-900"
+              >
+                <a
+                  href={embed.url}
+                  className="flex flex-col gap-3"
+                  target="_blank"
+                >
+                  <div className="text-[#1daaf9] font-bold">{embed.title}</div>
+                  <div className="text-zinc-300">{embed.description}</div>
+                  {embed.thumbnail && (
+                    <div className="rounded overflow-hidden">
+                      <img src={embed.thumbnail.url} alt="" />
+                    </div>
+                  )}
+                </a>
+              </div>
+            ))}
+          </>
+        )}
         {post.attachments && (
           <>
             {post.attachments.map((attachment) => (
-              <a href={attachment.url} key={attachment.title} target="_blank">
+              <a href={attachment.url} key={attachment.url} target="_blank">
                 <div className=" bg-[#2b2d31] rounded border-l-4 p-4 border-zinc-900">
                   <img src={attachment.url} alt="" />
                 </div>
@@ -41,7 +49,7 @@ export default function DiscordPost({ post }) {
           <div className="flex gap-3">
             {post.reactions.map((reaction, index) => (
               <div
-                key={index}
+                key={"emoji" + index}
                 className="flex items-center gap-2 bg-zinc-800 p-1 rounded"
               >
                 {reaction.emoji.id ? (

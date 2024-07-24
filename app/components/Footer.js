@@ -14,7 +14,7 @@ export default function Footer() {
         <div>Apple</div>
         <div>Spotify</div>
       </div>
-      <div className="p-5">© 2024 NEW MODELS</div>
+      <div className="p-5 whitespace-nowrap">© 2024 NEW MODELS</div>
     </div>
   )
 }
