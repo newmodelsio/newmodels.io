@@ -10,9 +10,9 @@ export default async function Page() {
   const response = await fetch(`https://newmodels.io/search.json`)
   const results = await response.json()
 
-  const ordered = results.archive.sort(function (a, b) {
-    return new Date(b.published) - new Date(a.published)
-  })
+  // const ordered = results.archive.sort(function (a, b) {
+  //   return new Date(b.published) - new Date(a.published)
+  // })
 
   return (
     <>
@@ -21,8 +21,8 @@ export default async function Page() {
       </div>
       <Logo />
       <Nav navItems={results.navItems} subNavItems={results.subNavItems} />
-      <Archive />
-      <FilterSearch results={results.archive} />
+      {/* <Archive /> */}
+      <FilterSearch allResults={results.archive} />
       {/* <Filters results={results} />
        */}
       <Footer />
