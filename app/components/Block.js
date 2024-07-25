@@ -53,7 +53,11 @@ export default function Block({ block }) {
             case "post":
               return (
                 <div className="mb-5">
-                  <a href={block.url} target="_blank">
+                  <a
+                    href={block.url}
+                    target="_blank"
+                    className={block.modifiers}
+                  >
                     <div dangerouslySetInnerHTML={{ __html: block.text }}></div>
                   </a>
                 </div>

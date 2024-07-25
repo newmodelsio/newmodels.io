@@ -3,6 +3,7 @@ import Toggle from "../components/Toggle"
 import Nav from "../components/Nav"
 import Archive from "../components/Archive"
 import Filters from "../components/Filters"
+import FilterSearch from "../components/FilterSearch"
 import Footer from "../components/Footer"
 
 export default async function Page() {
@@ -21,22 +22,9 @@ export default async function Page() {
       <Logo />
       <Nav navItems={results.navItems} subNavItems={results.subNavItems} />
       <Archive />
-      <Filters results={results} />
-      <div className="p-5 columns-3 gap-5">
-        {ordered.map((result) => (
-          <div
-            key={result.slug}
-            data-slug={result.slug}
-            className="flex flex-col mb-5"
-          >
-            <a href={result.link} target="_blank">
-              <div className="text-xs">{result.published}</div>
-              <div className="text-xs">{result.id}</div>
-              <div dangerouslySetInnerHTML={{ __html: result.title }}></div>
-            </a>
-          </div>
-        ))}
-      </div>
+      <FilterSearch results={results.archive} />
+      {/* <Filters results={results} />
+       */}
       <Footer />
     </>
   )
