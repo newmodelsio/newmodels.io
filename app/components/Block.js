@@ -95,7 +95,10 @@ export default function Block({ block }) {
                   ></div>
                   <div className="flex flex-col gap-5">
                     {block.articles.map((issue, i) => (
-                      <a href={issue.url} key={issue.id} target="_blank">
+                      <a
+                        href={"/editorial/" + block.slug + "/" + issue.slug}
+                        key={issue.id}
+                      >
                         {issue.cover && (
                           <Image
                             src={issue.cover}
