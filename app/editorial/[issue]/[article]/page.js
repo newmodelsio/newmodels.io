@@ -1,5 +1,4 @@
 import Logo from "../../../components/Logo"
-import Aggregate from "../../../components/Aggregate"
 import Footer from "../../../components/Footer"
 
 export default async function Page({ params }) {
