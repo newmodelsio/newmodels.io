@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { useState, useEffect } from "react"
 
 export default function Block({ block }) {
   return (
@@ -41,18 +40,24 @@ export default function Block({ block }) {
             case "image":
               return (
                 <div className="flex flex-wrap">
-                  <a href={block.link} target="_blank">
+                  {block.link ? (
+                    <a href={block.link} target="_blank">
+                      <Image src={block.src} alt="" width={300} height={300} />
+                    </a>
+                  ) : (
                     <Image src={block.src} alt="" width={300} height={300} />
+                  )}
+                  {block.caption && (
                     <div
                       className="my-2"
                       dangerouslySetInnerHTML={{ __html: block.caption }}
                     ></div>
-                  </a>
+                  )}
                 </div>
               )
             case "post":
               return (
-                <div className="mb-5">
+                <div className="mb-5 hover:underline">
                   <a
                     href={block.url}
                     target="_blank"
@@ -85,17 +90,28 @@ export default function Block({ block }) {
               return (
                 <div>
                   <div
-                    className="my-2"
+                    className="my-2 font-bold pb-5 mb-5"
                     dangerouslySetInnerHTML={{ __html: block.issue }}
                   ></div>
-                  {block.articles.map((issue, i) => (
-                    <a href={issue.url} key={issue.id} target="_blank">
-                      <div
-                        className="my-2"
-                        dangerouslySetInnerHTML={{ __html: issue.title }}
-                      ></div>
-                    </a>
-                  ))}
+                  <div className="flex flex-col gap-5">
+                    {block.articles.map((issue, i) => (
+                      <a href={issue.url} key={issue.id} target="_blank">
+                        {issue.cover && (
+                          <Image
+                            src={issue.cover}
+                            className="max-w-[150px]"
+                            alt=""
+                            width={300}
+                            height={300}
+                          />
+                        )}
+                        <div
+                          className="mt-2"
+                          dangerouslySetInnerHTML={{ __html: issue.title }}
+                        ></div>
+                      </a>
+                    ))}
+                  </div>
                 </div>
               )
             default:
