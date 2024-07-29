@@ -1,4 +1,5 @@
 import DiscordPost from "../components/DiscordPost"
+import DiscordSubmit from "../components/DiscordSubmit"
 import { useState, useEffect } from "react"
 import { getDiscord } from "../api/discord"
 
@@ -14,7 +15,7 @@ export default function Dark() {
 
   const getDiscordReplies = async () => {
     const response = await getDiscord("844287069345939506")
-    setDiscordReplies(response)
+    setDiscordReplies(response.filter((item) => item.referenced_message))
   }
 
   const getBulletinBoard = async () => {
@@ -38,9 +39,15 @@ export default function Dark() {
           ))}
         </div>
         <div className="flex flex-col gap-5 p-5">
+          <DiscordSubmit />
           <div className="font-bold">#NM-DISCORD-REPLIES</div>
           {discordReplies.map((post) => (
-            <DiscordPost key={post.id} post={post} />
+            <>
+              <div className="bg-[#2b2d31] rounded border-l-4 p-4 text-zinc-300 border-zinc-900">
+                {post.referenced_message?.content}
+              </div>
+              <DiscordPost key={post.id} post={post} />
+            </>
           ))}
         </div>
         <div className="flex flex-col gap-5 p-5">

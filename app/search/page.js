@@ -1,7 +1,6 @@
 import Logo from "../components/Logo"
 import Toggle from "../components/Toggle"
 import Nav from "../components/Nav"
-import Archive from "../components/Archive"
 import Filters from "../components/Filters"
 import FilterSearch from "../components/FilterSearch"
 import Footer from "../components/Footer"

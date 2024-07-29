@@ -12,6 +12,12 @@ export default function FilterSearch({ allResults }) {
     setResults(updatedResulted)
   }
 
+  function countItems(string) {
+    return results.filter((item) => {
+      return item.published.includes(string)
+    }).length
+  }
+
   useEffect(() => {
     setResults(allResults)
   }, [allResults])
@@ -20,7 +26,7 @@ export default function FilterSearch({ allResults }) {
     <>
       <div className="w-full border-b divide-x divide-zinc-300">
         <div className="flex justify-center">
-          <div className="flex w-full max-w-lg px-3 border-x">
+          <div className="flex w-full md:w-1/3">
             <input
               className="p-5 w-full text-center uppercase text-sm"
               type="text"
@@ -43,13 +49,48 @@ export default function FilterSearch({ allResults }) {
           </div>
         </div>
       </div>
+      {/* {results?.length > 0 && (
+        <div className="grid grid-cols-3 divide-x w-full uppercase text-sm border-b">
+          <div className="flex flex-col p-5">
+            <div className="font-bold">Year</div>
+            <div>2024 ({countItems("2024")})</div>
+            <div>2023 ({countItems("2023")})</div>
+            <div>2022 ({countItems("2022")})</div>
+            <div>2021 ({countItems("2021")})</div>
+            <div>2020 ({countItems("2020")})</div>
+            <div>2019 ({countItems("2019")})</div>
+            <div>2018 ({countItems("2018")})</div>
+            <div>2017 ({countItems("2017")})</div>
+          </div>
+          <div className="flex flex-col p-5">
+            <div className="font-bold">Category</div>
+            <div>NM Podcast</div>
+            <div>NM Editorial</div>
+            <div>NM Projects</div>
+            <div>NM TopSoil</div>
+            <div>NM DISPATCH</div>
+            <div>NM TV</div>
+            <div>NM LECTURES</div>
+            <div>NM SPECIAL REPORTS</div>
+            <div>NM SHORTS</div>
+            <div>NM GREENROOM</div>
+          </div>
+          <div className="flex flex-col p-5">
+            <div className="font-bold">Type</div>
+            <div>Article</div>
+            <div>Video</div>
+            <div>Audio</div>
+          </div>
+        </div>
+      )} */}
       <br />
-      {results.length > 0 ? (
+      {results?.length > 0 ? (
         <div className="p-5 columns-3 gap-5">
           {results.map((result, index) => (
             <div key={index} className="flex flex-col mb-5">
-              <a href={result.url} target="_blank">
+              <a href={result.link} target="_blank">
                 <div
+                  className="text-xs"
                   dangerouslySetInnerHTML={{ __html: result.published }}
                 ></div>
                 <div className="text-xs uppercase">

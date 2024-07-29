@@ -1,6 +1,4 @@
 import Logo from "../components/Logo"
-import Toggle from "../components/Toggle"
-import Nav from "../components/Nav"
 import Aggregate from "../components/Aggregate"
 import Footer from "../components/Footer"
 
