@@ -5,20 +5,16 @@ import Footer from "./components/Footer"
 
 export default async function Main() {
   const response = await fetch(`https://newmodels.io/home.json`)
-  const columns = await response.json()
+  const data = await response.json()
 
   return (
     <>
       <div className="flex justify-center p-10">
         <div className="w-[300px] h-[100px] bg-black"></div>
       </div>
-      <FeaturedPost featured={columns.featured[0]} />
+      <FeaturedPost featured={data.featured[0]} />
       <Logo />
-      <Aggregate
-        columns={columns}
-        navItems={columns.navItems}
-        subNavItems={columns.subNavItems}
-      />
+      <Aggregate columns={data} nav={data.nav} />
       <Footer />
     </>
   )

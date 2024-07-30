@@ -22,3 +22,10 @@ body {
 .postContent a {
   color: #1daaf9;
 }
+
+.prose p {
+  margin-bottom: 15px;
+}
+.prose img {
+  width: 100%;
+}

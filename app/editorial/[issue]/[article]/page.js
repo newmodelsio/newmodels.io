@@ -1,17 +1,26 @@
 import Logo from "../../../components/Logo"
+import Nav from "../../../components/Nav"
+import Block from "../../../components/Block"
 import Footer from "../../../components/Footer"
 
 export default async function Page({ params }) {
   const response = await fetch(
     `https://newmodels.io/editorial/${params.issue}/${params.article}.json`
   )
-  const article = await response.json()
-
-  console.log(article)
+  const data = await response.json()
 
   return (
     <>
-      article
+      <div className="flex justify-center p-10">
+        <div className="w-[300px] h-[100px] bg-black"></div>
+      </div>
+      <Logo />
+      <Nav nav={data.nav} />
+      <div className="prose max-w-xl mx-auto text-lg flex flex-col gap-5">
+        {data.blocks.map((block) => (
+          <Block key={block.id} block={block} />
+        ))}
+      </div>
       <Footer />
     </>
   )

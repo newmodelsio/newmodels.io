@@ -49,7 +49,7 @@ export default function Block({ block }) {
                   )}
                   {block.caption && (
                     <div
-                      className="my-2"
+                      className="my-2 text-xs"
                       dangerouslySetInnerHTML={{ __html: block.caption }}
                     ></div>
                   )}
