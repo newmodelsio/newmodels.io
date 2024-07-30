@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import Logo from "../../../components/Logo"
 import Nav from "../../../components/Nav"
 import Block from "../../../components/Block"
@@ -14,7 +16,9 @@ export default async function Page({ params }) {
       <div className="flex justify-center p-10">
         <div className="w-[300px] h-[100px] bg-black"></div>
       </div>
-      <Logo />
+      <Link href="../../">
+        <Logo />
+      </Link>
       <Nav nav={data.nav} />
       <div className="prose max-w-xl mx-auto text-lg flex flex-col gap-5">
         {data.blocks.map((block) => (

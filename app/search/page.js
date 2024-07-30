@@ -9,8 +9,6 @@ export default async function Page() {
   const response = await fetch(`https://newmodels.io/search.json`)
   const data = await response.json()
 
-  console.log(data)
-
   // const ordered = results.archive.sort(function (a, b) {
   //   return new Date(b.published) - new Date(a.published)
   // })

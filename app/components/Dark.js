@@ -31,7 +31,7 @@ export default function Dark() {
 
   return (
     <>
-      <div className="grid md:grid-cols-3 divide-x divide-zinc-800 bg-[#36393f] text-white font-discord min-h-screen">
+      <div className="grid md:grid-cols-3 divide-x overflow-hidden divide-zinc-800 bg-[#36393f] text-white font-discord min-h-screen">
         <div className="flex flex-col gap-5 p-5">
           <div className="font-bold">#TOP-LINKS</div>
           {topLinks.map((post) => (
