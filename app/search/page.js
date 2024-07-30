@@ -7,7 +7,9 @@ import Footer from "../components/Footer"
 
 export default async function Page() {
   const response = await fetch(`https://newmodels.io/search.json`)
-  const results = await response.json()
+  const data = await response.json()
+
+  console.log(data)
 
   // const ordered = results.archive.sort(function (a, b) {
   //   return new Date(b.published) - new Date(a.published)
@@ -19,9 +21,9 @@ export default async function Page() {
         <div className="w-[300px] h-[100px] bg-black"></div>
       </div>
       <Logo />
-      <Nav navItems={results.navItems} subNavItems={results.subNavItems} />
+      <Nav nav={data.nav} />
       {/* <Archive /> */}
-      <FilterSearch allResults={results.archive} />
+      <FilterSearch allResults={data.archive} />
       {/* <Filters results={results} />
        */}
       <Footer />
