@@ -12,7 +12,7 @@ export default async function Main() {
       <div className="flex justify-center p-10">
         <div className="w-[300px] h-[100px] bg-black"></div>
       </div>
-      <FeaturedPost featured={data.featured[0]} />
+      <FeaturedPost featured={data.featured} />
       <Logo />
       <Aggregate columns={data} nav={data.nav} />
       <Footer />

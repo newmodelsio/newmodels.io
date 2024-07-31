@@ -13,7 +13,7 @@ export default async function Page({ params }) {
       <div className="flex justify-center p-10">
         <div className="w-[300px] h-[100px] bg-black"></div>
       </div>
-      <FeaturedPost featured={data.featured[0]} />
+      <FeaturedPost featured={data.featured} />
       <Link href="../">
         <Logo />
       </Link>
