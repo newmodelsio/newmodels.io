@@ -18,7 +18,6 @@ export default function DiscordSubmit() {
 
   return (
     <>
-      <div className="text-lg uppercase mb-2">#NM-DISCORD-REPLIES</div>
       <textarea
         className="w-full bg-[#40454b] mb-1 p-5 rounded outline-none"
         placeholder="Ask the NM Discord"

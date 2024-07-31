@@ -26,7 +26,7 @@ export default function FilterSearch({ allResults }) {
     <>
       <div className="w-full border-b divide-x divide-zinc-300">
         <div className="flex justify-center">
-          <div className="flex w-full md:w-1/3">
+          <div className="flex w-full md:w-1/3 px-5">
             <input
               className="p-5 w-full text-center uppercase text-sm"
               type="text"
@@ -85,7 +85,7 @@ export default function FilterSearch({ allResults }) {
       )} */}
       <br />
       {results?.length > 0 ? (
-        <div className="p-5 columns-3 gap-5">
+        <div className="p-5 md:columns-3 gap-5">
           {results.map((result, index) => (
             <div key={index} className="flex flex-col mb-5">
               <a href={result.link} target="_blank">
