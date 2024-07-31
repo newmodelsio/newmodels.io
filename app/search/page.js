@@ -1,7 +1,7 @@
 import Logo from "../components/Logo"
 import Toggle from "../components/Toggle"
 import Nav from "../components/Nav"
-import FilterSearch from "../components/FilterSearch"
+import Search from "../components/Search"
 import Footer from "../components/Footer"
 
 export default async function Page() {
@@ -19,8 +19,7 @@ export default async function Page() {
       </div>
       <Logo />
       <Nav nav={data.nav} />
-      <FilterSearch allResults={data.archive} />
-
+      <Search allResults={data.archive} />
       <Footer />
     </>
   )

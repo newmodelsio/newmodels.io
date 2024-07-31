@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 export default function Nav({ nav }) {
   const path = usePathname()
   return (
-    <div className="sticky top-[-1px]  bg-white overflow-y-scroll p-5 border-y flex gap-5 justify-between uppercase text-[11px]">
+    <div className="sticky top-[-1px] md:relative md:top-0 bg-white overflow-y-scroll p-5 border-y flex gap-5 justify-between uppercase text-[11px]">
       <div className="flex gap-5">
         {nav?.main.map((item) => (
           <Link

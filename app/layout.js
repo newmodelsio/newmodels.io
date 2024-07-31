@@ -9,6 +9,13 @@ export const metadata = {
     "NEW MODELS is a media channel and community addressing the emergent effects of networked technology on culture.",
 }
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
