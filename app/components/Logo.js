@@ -71,17 +71,19 @@ export default function Logo() {
     const updateLogo = () => {
       let math = (a * b * c * d * e) / 5000
 
-      setData((prev) => [
-        math,
-        prev[0],
-        prev[1],
-        prev[2],
-        prev[3],
-        prev[4],
-        prev[5],
-        prev[6],
-        prev[7],
-      ])
+      if (math) {
+        setData((prev) => [
+          math,
+          prev[0],
+          prev[1],
+          prev[2],
+          prev[3],
+          prev[4],
+          prev[5],
+          prev[6],
+          prev[7],
+        ])
+      }
     }
   }
 
