@@ -5,7 +5,9 @@ import Footer from "../components/Footer"
 import Link from "next/link"
 
 export default async function Page({ params }) {
-  const response = await fetch(`https://newmodels.io/${params.slug}.json`)
+  const response = await fetch(`https://newmodels.io/${params.slug}.json`, {
+    cache: "no-store",
+  })
   const data = await response.json()
 
   return (
