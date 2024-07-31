@@ -98,6 +98,7 @@ export default function Block({ block }) {
                       <a
                         href={"/editorial/" + block.slug + "/" + issue.slug}
                         key={issue.id}
+                        className="hover:underline"
                       >
                         {issue.cover && (
                           <Image
