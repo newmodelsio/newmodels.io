@@ -30,7 +30,7 @@ export default function Block({ block }) {
                       href={image.url}
                       key={image.id + i}
                       target="_blank"
-                      className="flex m-1  aspect-square bg-gray-100"
+                      className="flex m-1  aspect-square bg-gray-100 hover:opacity-80"
                     >
                       <Image src={image.src} alt="" width={300} height={300} />
                     </a>

@@ -5,7 +5,7 @@ export default function FeaturedPost({ featured }) {
     <>
       <div className="flex justify-center my-10">
         <div className="max-w-xl">
-          <a href={featured.link}>
+          <a href={featured.link} target="_blank">
             <Image
               src={featured.thumbnail}
               alt=""
