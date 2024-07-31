@@ -1,8 +1,6 @@
 import "./globals.css"
 import "./modifiers.css"
 
-import ThemeProvider from "./theme-provider"
-
 export const metadata = {
   title: "NEW MODELS 2024®",
   description:
@@ -19,9 +17,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

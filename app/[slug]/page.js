@@ -1,4 +1,5 @@
 import Logo from "../components/Logo"
+import FeaturedPost from "../components/FeaturedPost"
 import Aggregate from "../components/Aggregate"
 import Footer from "../components/Footer"
 import Link from "next/link"
@@ -12,6 +13,7 @@ export default async function Page({ params }) {
       <div className="flex justify-center p-10">
         <div className="w-[300px] h-[100px] bg-black"></div>
       </div>
+      <FeaturedPost featured={data.featured[0]} />
       <Link href="../">
         <Logo />
       </Link>

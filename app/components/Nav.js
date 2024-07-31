@@ -13,6 +13,7 @@ export default function Nav({ nav }) {
             key={item.slug}
             href={path.includes("editorial") ? "../../" + item.slug : item.slug}
             className="whitespace-nowrap"
+            scroll={false}
           >
             {item.title}
           </Link>
