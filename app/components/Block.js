@@ -86,6 +86,12 @@ export default function Block({ block }) {
               )
             case "hr":
               return <hr className="mb-5" />
+            case "embed":
+              return (
+                <div>
+                  <div dangerouslySetInnerHTML={{ __html: block.iframe }}></div>
+                </div>
+              )
             case "issue":
               return (
                 <div>
