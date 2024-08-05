@@ -28,7 +28,7 @@ export default function Section({ section }) {
                     />
                   ))}
                   <div
-                    className="flex justify-end cursor-pointer text-[10px] text-zinc-400 uppercase"
+                    className="flex justify-end cursor-pointer text-[10px] uppercase"
                     onClick={() => {
                       setExpand(false)
                     }}
@@ -38,7 +38,7 @@ export default function Section({ section }) {
                 </>
               ) : (
                 <>
-                  {section.posts.slice(0, 10).map((post) => (
+                  {section.posts.slice(0, 3).map((post) => (
                     <Post
                       key={post.title}
                       title={post.title}
