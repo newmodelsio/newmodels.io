@@ -4,7 +4,9 @@ import Aggregate from "./components/Aggregate"
 import Footer from "./components/Footer"
 
 export default async function Main() {
-  const response = await fetch(`https://newmodels.io/home.json`)
+  const response = await fetch(`https://newmodels.io/home.json`, {
+    cache: "no-store",
+  })
   const data = await response.json()
 
   return (
