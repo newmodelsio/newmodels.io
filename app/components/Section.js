@@ -53,7 +53,7 @@ export default function Section({ section }) {
                       }}
                     >
                       View More{" "}
-                      <span className="border flex justify-center items-center rounded px-1 ml-2">
+                      <span className="bg-black text-white font-bold flex justify-center items-center rounded-full px-2 ml-2">
                         {section.posts.length - 3}+
                       </span>
                     </div>
