@@ -67,7 +67,7 @@ export default function Search({ allResults }) {
           ))}
         </div>
       ) : (
-        <div className="p-5">No results found</div>
+        <div className="p-5 min-h-screen">No results found</div>
       )}
     </>
   )

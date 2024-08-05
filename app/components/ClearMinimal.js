@@ -7,7 +7,7 @@ export default function ClearMinimal() {
       <div className="grid md:grid-cols-3 divide-x">
         <div className="flex flex-col">
           {feed
-            .filter((section) => section.col == 1)
+            .filter((section) => section.col == 2)
             .map((section) => (
               <Section key={section.title} section={section} />
             ))}
@@ -81,7 +81,7 @@ export default function ClearMinimal() {
         </div>
         <div className="flex flex-col">
           {feed
-            .filter((section) => section.col == 2)
+            .filter((section) => section.col == 1)
             .map((section) => (
               <Section key={section.title} section={section} />
             ))}
