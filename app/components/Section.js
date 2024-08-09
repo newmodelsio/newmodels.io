@@ -13,7 +13,7 @@ export default function Section({ section }) {
         <div className="flex flex-col gap-7 border-b py-5">
           <div>
             <div className="font-bold uppercase">{section.title}</div>
-            {/* <div className="text-zinc-400">{section.description}</div> */}
+            <div className="text-zinc-400">{section.description}</div>
             <div dangerouslySetInnerHTML={{ __html: section.text }} />
           </div>
           {section.posts && (
