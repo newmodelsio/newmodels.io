@@ -6,6 +6,11 @@
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
 }
+
+.columns-2 a:hover {
+  text-decoration: underline;
+}
+
 /* @font-face {
   font-family: "Grotesk";
   font-display: block;

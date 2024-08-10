@@ -13,7 +13,9 @@ export default function Section({ section }) {
         <div className="flex flex-col gap-7 border-b py-5">
           <div>
             <div className="font-bold uppercase">{section.title}</div>
-            <div className="text-zinc-400">{section.description}</div>
+            <div className="text-zinc-400 leading-snug">
+              {section.description}
+            </div>
             <div dangerouslySetInnerHTML={{ __html: section.text }} />
           </div>
           {section.posts && (
@@ -53,7 +55,7 @@ export default function Section({ section }) {
                       }}
                     >
                       View More{" "}
-                      <span className="bg-black text-white font-bold flex justify-center items-center rounded-full px-2 ml-2">
+                      <span className="bg-black text-white font-bold flex justify-center items-center rounded-full px-1 ml-2">
                         {section.posts.length - 3}+
                       </span>
                     </div>
