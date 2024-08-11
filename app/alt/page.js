@@ -7,10 +7,10 @@ import AltNav from "../components/AltNav"
 export default async function Main() {
   const [homeResponse, searchResponse] = await Promise.all([
     fetch("https://newmodels.io/home.json", {
-      next: { revalidate: 3600 },
+      cache: "no-store",
     }),
     fetch("https://newmodels.io/search.json", {
-      next: { revalidate: 3600 },
+      cache: "no-store",
     }),
   ])
 
@@ -30,7 +30,9 @@ export default async function Main() {
       </div>
       <AltNav />
       <FeaturedPost featured={plainHomeData.featured} />
-      <Logo />
+      <a href="/alt">
+        <Logo />
+      </a>
       <AltAggregate data={plainSearchData} />
       <Footer />
     </>

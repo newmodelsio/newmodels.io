@@ -28,7 +28,7 @@ export default function AltNav() {
         </svg>
       </div>
       {toggleNav && (
-        <div className="bg-white w-full md:w-1/3 h-screen fixed top-0 right-0 z-20 p-5 md:p-10 flex flex-col gap-5 overflow-y-scroll border-l">
+        <div className="bg-white slideIn ease-in-out w-full md:w-1/3 h-screen fixed top-0 right-0 z-20 p-5 md:p-10 flex flex-col gap-5 overflow-y-scroll border-l">
           <div className="flex flex-col gap-5">
             <p className="font-bold flex">
               <div className="bg-[yellow]">ABOUT NM</div>
@@ -411,7 +411,9 @@ export default function AltNav() {
             <div className="" data-tags="">
               <p>
                 <br />
-                We also hosted several physical events (many with Berlin's{" "}
+                We also hosted several physical events (many with Berlin{
+                  "'"
+                }s{" "}
                 <a
                   href="https://www.traumabarundkino.de/"
                   target="_blank"
@@ -429,7 +431,7 @@ export default function AltNav() {
                   </a>
                 </strong>{" "}
                 on world building and online identity formation and the premier
-                of Richard Kennedy's 2020 opera{" "}
+                of Richard Kennedy{"'"}s 2020 opera{" "}
                 <strong>
                   <a
                     href="https://newmodels.io/editorial/issue-2/fubu-fuku-an-opera-by-richard-kennedy"
@@ -506,15 +508,15 @@ export default function AltNav() {
                 Suddenly, New Models was no longer just a creator-to-audience
                 stream, but a mainframe for processing information free from the
                 extractive properties of Clearnet spaces. We began referring to
-                this ecosystem as a "
+                this ecosystem as a {'"'}
                 <a
                   href="https://onezero.medium.com/the-dark-forest-theory-of-the-internet-7dc3e68a7cb1"
                   rel="noopener noreferrer nofollow"
                 >
                   dark forest
                 </a>
-                ." (For more on the interplay of different digital realms, see
-                Caroline Busta's Internet/counterculture text for{" "}
+                .{'"'} (For more on the interplay of different digital realms,
+                see Caroline Busta{"'"}s Internet/counterculture text for{" "}
                 <em>
                   <a
                     href="https://www.documentjournal.com/2021/01/the-internet-didnt-kill-counterculture-you-just-wont-find-it-on-instagram/"

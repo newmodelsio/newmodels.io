@@ -52,3 +52,16 @@ body {
 .prose img {
   width: 100%;
 }
+
+.slideIn {
+  animation: slideIn 300ms;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
