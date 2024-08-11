@@ -3,6 +3,16 @@ import DiscordSubmit from "../components/DiscordSubmit"
 import { useState, useEffect } from "react"
 import { getDiscord } from "../api/discord"
 
+const Placeholder = () => (
+  <div className="flex flex-col gap-5">
+    <div className="w-full bg-[#2b2d31] aspect-square rounded"></div>
+    <div className="flex flex-col gap-2">
+      <div className="w-full bg-[#2b2d31] p-3 rounded"></div>
+      <div className="w-full bg-[#2b2d31] p-3 rounded"></div>
+    </div>
+  </div>
+)
+
 export default function Dark() {
   const [topLinks, setTopLinks] = useState([])
   const [discordReplies, setDiscordReplies] = useState([])
@@ -41,27 +51,46 @@ export default function Dark() {
       <div className="grid grid-cols-1 md:grid-cols-3 divide-x overflow-hidden divide-zinc-800 bg-[#36393f] text-white font-discord min-h-screen">
         <div id="top-links" className="flex flex-col gap-5 p-5">
           <div className="hidden md:block">#TOP-LINKS</div>
-          {topLinks.map((post) => (
-            <DiscordPost key={post.id} post={post} />
-          ))}
+          {topLinks.length ? (
+            <>
+              {topLinks.map((post) => (
+                <DiscordPost key={post.id} post={post} />
+              ))}
+            </>
+          ) : (
+            <Placeholder />
+          )}
         </div>
         <div id="nm-discord-replies" className="flex flex-col gap-5 p-5">
           <DiscordSubmit />
           <div>#NM-DISCORD-REPLIES</div>
-          {discordReplies.map((post) => (
+          {discordReplies.length ? (
             <>
-              <div className="bg-[#2b2d31] rounded border-l-4 p-4 text-zinc-300 border-zinc-900">
-                {post.referenced_message?.content}
-              </div>
-              <DiscordPost key={post.id} post={post} />
+              {discordReplies.map((post) => (
+                <>
+                  <div className="bg-[#2b2d31] rounded border-l-4 p-4 text-zinc-300 border-zinc-900">
+                    {post.referenced_message?.content}
+                  </div>
+                  <DiscordPost key={post.id} post={post} />
+                </>
+              ))}
             </>
-          ))}
+          ) : (
+            <Placeholder />
+          )}
         </div>
         <div id="bulletin-board" className="flex flex-col gap-5 p-5">
           <div>#BULLETIN-BOARD</div>
-          {bulletinBoard.map((post) => (
-            <DiscordPost key={post.id} post={post} />
-          ))}
+
+          {bulletinBoard.length ? (
+            <>
+              {bulletinBoard.map((post) => (
+                <DiscordPost key={post.id} post={post} />
+              ))}
+            </>
+          ) : (
+            <Placeholder />
+          )}
         </div>
       </div>
     </>
