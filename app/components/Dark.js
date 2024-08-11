@@ -31,8 +31,8 @@ export default function Dark() {
 
   return (
     <>
-      <div className="md:hidden sticky top-0 overflow-y-scroll p-5 border-b border-zinc-600 flex gap-5 justify-between uppercase text-[11px] bg-[#36393f] text-zinc-300">
-        <div className="flex gap-5 ">
+      <div className="md:hidden block top-0 overflow-y-scroll p-5 border-b border-zinc-600 flex gap-5 justify-between uppercase text-[11px] bg-[#36393f] text-zinc-300">
+        <div className="flex w-full gap-5 justify-between ">
           <a href="#top-links">#TOP-LINKS</a>
           <a href="#nm-discord-replies">#NM-DISCORD-REPLIES</a>
           <a href="#bulletin-board">#BULLETIN-BOARD</a>
@@ -40,7 +40,7 @@ export default function Dark() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 divide-x overflow-hidden divide-zinc-800 bg-[#36393f] text-white font-discord min-h-screen">
         <div id="top-links" className="flex flex-col gap-5 p-5">
-          <div>#TOP-LINKS</div>
+          <div className="hidden md:block">#TOP-LINKS</div>
           {topLinks.map((post) => (
             <DiscordPost key={post.id} post={post} />
           ))}

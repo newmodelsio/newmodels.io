@@ -9,7 +9,7 @@ export default function AltNav() {
   return (
     <div>
       <div
-        className="cursor-pointer z-30 fixed top-5 right-5 bg-zinc-100 text-zinc-700 rounded-full p-2"
+        className="cursor-pointer z-30 fixed top-3 right-3 bg-zinc-100 text-zinc-700 rounded-full p-2"
         onClick={() => setToggleNav(!toggleNav)}
       >
         {toggleNav ? (
