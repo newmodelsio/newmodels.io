@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react"
 
-export default function Post({ title, src }) {
+export default function Post({ block }) {
+  console.log(block)
   const [random, setRandom] = useState(0)
 
   useEffect(() => {
@@ -11,11 +12,19 @@ export default function Post({ title, src }) {
   }, [])
 
   return (
-    <div key={title} className="hover:underline cursor-pointer">
+    <div key={block.id} className="hover:underline">
       {random == 2 && (
-        <img src={src} className="max-w-[125px] max-h-[125px] mb-1" alt="" />
+        <img
+          src={block.thumbnail}
+          className="max-w-[125px] max-h-[125px] mb-1"
+          alt=""
+        />
       )}
-      <div dangerouslySetInnerHTML={{ __html: title }} />
+      <a href={block.url} target="_blank" className={block.modifiers}>
+        <div
+          dangerouslySetInnerHTML={{ __html: block.text.replace("<br>", "") }}
+        />
+      </a>
     </div>
   )
 }

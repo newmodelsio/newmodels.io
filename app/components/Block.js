@@ -1,6 +1,8 @@
 "use client"
 
 import Image from "next/image"
+import Section from "./Section"
+import Post from "./Post"
 
 export default function Block({ block }) {
   return (
@@ -8,44 +10,58 @@ export default function Block({ block }) {
       <div key={block.id}>
         {(() => {
           switch (block.type) {
+            case "section":
+              return <Section section={block} />
             case "text":
               return (
                 <div
-                  className="mb-5"
+                  className={block.modifiers}
                   dangerouslySetInnerHTML={{ __html: block.text }}
                 ></div>
               )
-            case "heading":
-              return (
-                <div
-                  className="font-bold mb-5"
-                  dangerouslySetInnerHTML={{ __html: block.text }}
-                ></div>
-              )
-            case "gallery":
-              return (
-                <div className="grid grid-cols-3">
-                  {block.images.map((image, i) => (
-                    <a
-                      href={image.url}
-                      key={image.id + i}
-                      target="_blank"
-                      className="flex m-1  aspect-square bg-gray-100 hover:opacity-80"
-                    >
-                      <Image src={image.src} alt="" width={300} height={300} />
-                    </a>
-                  ))}
-                </div>
-              )
+            // case "heading":
+            //   return (
+            //     <div
+            //       className="font-bold mb-5"
+            //       dangerouslySetInnerHTML={{ __html: block.text }}
+            //     ></div>
+            //   )
+            // case "gallery":
+            //   return (
+            //     <div className="grid grid-cols-3">
+            //       {block.images.map((image, i) => (
+            //         <a
+            //           href={image.url}
+            //           key={image.id + i}
+            //           target="_blank"
+            //           className="flex m-1  aspect-square bg-gray-100 hover:opacity-80"
+            //         >
+            //           <Image src={image.src} alt="" width={300} height={300} />
+            //         </a>
+            //       ))}
+            //     </div>
+            //   )
             case "image":
               return (
                 <div className="flex flex-wrap">
                   {block.link ? (
                     <a href={block.link} target="_blank">
-                      <Image src={block.src} alt="" width={300} height={300} />
+                      <Image
+                        className="w-full"
+                        src={block.src}
+                        alt=""
+                        width={1000}
+                        height={1000}
+                      />
                     </a>
                   ) : (
-                    <Image src={block.src} alt="" width={300} height={300} />
+                    <Image
+                      className="w-full"
+                      src={block.src}
+                      alt=""
+                      width={1000}
+                      height={1000}
+                    />
                   )}
                   {block.caption && (
                     <div
@@ -56,36 +72,26 @@ export default function Block({ block }) {
                 </div>
               )
             case "post":
-              return (
-                <div className="mb-5 hover:underline">
-                  <a
-                    href={block.url}
-                    target="_blank"
-                    className={block.modifiers}
-                  >
-                    <div dangerouslySetInnerHTML={{ __html: block.text }}></div>
-                  </a>
-                </div>
-              )
-            case "product":
-              return (
-                <div className="mb-5">
-                  <a href={block.url} target="_blank">
-                    <Image
-                      src={block.thumbnail}
-                      alt=""
-                      width={300}
-                      height={300}
-                    />
-                    <div
-                      className="my-2"
-                      dangerouslySetInnerHTML={{ __html: block.title }}
-                    ></div>
-                  </a>
-                </div>
-              )
+              return <Post block={block} />
+            // case "product":
+            //   return (
+            //     <div className="mb-5">
+            //       <a href={block.url} target="_blank">
+            //         <Image
+            //           src={block.thumbnail}
+            //           alt=""
+            //           width={300}
+            //           height={300}
+            //         />
+            //         <div
+            //           className="my-2"
+            //           dangerouslySetInnerHTML={{ __html: block.title }}
+            //         ></div>
+            //       </a>
+            //     </div>
+            //   )
             case "hr":
-              return <hr className="mb-5" />
+              return <hr />
             case "embed":
               return (
                 <div>
@@ -95,12 +101,12 @@ export default function Block({ block }) {
             case "issue":
               return (
                 <div>
-                  <div
-                    className="my-2 font-bold pb-5 mb-5"
+                  {/* <div
+                    className="my-2 font-bold pb-5"
                     dangerouslySetInnerHTML={{ __html: block.issue }}
-                  ></div>
-                  <div className="flex flex-col gap-5">
-                    {block.articles.map((issue, i) => (
+                  ></div> */}
+                  {/* <div className="flex flex-col gap-5">
+                    {block.articles.slice(0, 3).map((issue, i) => (
                       <a
                         href={"/editorial/" + block.slug + "/" + issue.slug}
                         key={issue.id}
@@ -121,7 +127,7 @@ export default function Block({ block }) {
                         ></div>
                       </a>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               )
             default:

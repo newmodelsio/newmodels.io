@@ -66,7 +66,7 @@ export default function Dark() {
           <div>#NM-DISCORD-REPLIES</div>
           {discordReplies.length ? (
             <>
-              {discordReplies.map((post) => (
+              {discordReplies.slice(0, 5).map((post) => (
                 <>
                   <div className="bg-[#2b2d31] rounded border-l-4 p-4 text-zinc-300 border-zinc-900">
                     {post.referenced_message?.content}

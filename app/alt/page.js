@@ -5,8 +5,13 @@ import Footer from "../components/Footer"
 import AltNav from "../components/AltNav"
 
 export default async function Main() {
+  // const response = await fetch(`https://newmodels.io/2024.json`, {
+  //   cache: "no-store",
+  // })
+  // const data = await response.json()
+
   const [homeResponse, searchResponse] = await Promise.all([
-    fetch("https://newmodels.io/home.json", {
+    fetch("https://newmodels.io/2024.json", {
       cache: "no-store",
     }),
     fetch("https://newmodels.io/search.json", {
@@ -14,14 +19,10 @@ export default async function Main() {
     }),
   ])
 
-  const [homeData, searchData] = await Promise.all([
+  const [data, searchData] = await Promise.all([
     homeResponse.json(),
     searchResponse.json(),
   ])
-
-  // Ensure the data is a plain object
-  const plainHomeData = JSON.parse(JSON.stringify(homeData))
-  const plainSearchData = JSON.parse(JSON.stringify(searchData))
 
   return (
     <>
@@ -29,11 +30,11 @@ export default async function Main() {
         <div className="w-[300px] h-[100px] bg-black"></div>
       </div>
       <AltNav />
-      <FeaturedPost featured={plainHomeData.featured} />
+      <FeaturedPost featured={data.featured} />
       <a href="/alt">
         <Logo />
       </a>
-      <AltAggregate data={plainSearchData} />
+      <AltAggregate data={data} searchData={searchData} />
       <Footer />
     </>
   )

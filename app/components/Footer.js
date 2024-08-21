@@ -3,7 +3,7 @@
 export default function Footer() {
   return (
     <div className="text-[11px] border-t  flex flex-col md:flex-row items-center justify-between uppercase">
-      <div className="p-5 w-full md:flex  md:flex-row gap-5 grid grid-cols-2">
+      <div className="p-5 w-full md:flex md:flex-row gap-7 grid grid-cols-2">
         <a
           href="https://podcasts.apple.com/us/podcast/new-models/id1399619562"
           target="_blank"
