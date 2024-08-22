@@ -3,8 +3,17 @@
 import { useState, useEffect } from "react"
 import Filter from "./Filter"
 
-export default function Search({ allResults }) {
+export default function Search() {
+  const [allResults, setAllResults] = useState()
   const [results, setResults] = useState()
+
+  async function loadData() {
+    const response = await fetch(`https://newmodels.io/search.json`, {
+      cache: "no-store",
+    })
+    const data = await response.json()
+    setAllResults(data.archive)
+  }
 
   function handleChange(key, value) {
     const updatedResulted = allResults.filter((item) => {
@@ -12,6 +21,10 @@ export default function Search({ allResults }) {
     })
     setResults(updatedResulted)
   }
+
+  useEffect(() => {
+    loadData()
+  }, [])
 
   useEffect(() => {
     setResults(allResults)
@@ -44,30 +57,53 @@ export default function Search({ allResults }) {
           </div>
         </div>
       </div>
-      {results?.length > 0 && (
-        <Filter allResults={allResults} handleChange={handleChange} />
-      )}
-      <br />
-      {results?.length > 0 ? (
-        <div className="p-5 md:columns-3 gap-5">
-          {results.map((result, index) => (
-            <div key={index} className="flex flex-col mb-5">
-              <a href={result.link} target="_blank">
-                <div
-                  className="text-xs"
-                  dangerouslySetInnerHTML={{ __html: result.published }}
-                ></div>
-                <div className="flex gap-2 text-xs uppercase">
-                  {result.type?.includes("audio") && <div>Audio</div>}
-                  {result.type?.includes("video") && <div>Video</div>}
+      {allResults ? (
+        <>
+          {results?.length > 0 && (
+            <Filter allResults={allResults} handleChange={handleChange} />
+          )}
+          <br />
+          {results?.length > 0 ? (
+            <div className="p-5 md:columns-3 gap-5">
+              {results.map((result, index) => (
+                <div key={index} className="flex flex-col mb-5">
+                  <a href={result.link} target="_blank">
+                    <div
+                      className="text-xs"
+                      dangerouslySetInnerHTML={{ __html: result.published }}
+                    ></div>
+                    <div className="flex gap-2 text-xs uppercase">
+                      {result.type?.includes("audio") && <div>Audio</div>}
+                      {result.type?.includes("video") && <div>Video</div>}
+                    </div>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: result.title }}
+                    ></div>
+                  </a>
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: result.title }}></div>
-              </a>
+              ))}
             </div>
-          ))}
-        </div>
+          ) : (
+            <div className="p-5 min-h-screen">{/* No results found */}</div>
+          )}
+        </>
       ) : (
-        <div className="p-5 min-h-screen">{/* No results found */}</div>
+        <>
+          <div className="p-5 text-center uppercase text-[11px] border-b cursor-pointer">
+            <div className="opacity-0">Loading…</div>
+          </div>
+          <div className="p-5 md:columns-3 ">
+            {(() => {
+              const arr = []
+              for (let i = 0; i < 30; i++) {
+                arr.push(
+                  <div className="w-full h-[20px] bg-zinc-100 mb-5 rounded animate-pulse"></div>
+                )
+              }
+              return arr
+            })()}
+          </div>
+        </>
       )}
     </>
   )

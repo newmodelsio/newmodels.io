@@ -6,7 +6,7 @@ import Search from "../components/Search"
 import { useState } from "react"
 import ClearMinimal from "../components/ClearMinimal"
 
-export default function AltAggregate({ data, searchData }) {
+export default function AltAggregate({ data }) {
   const [toggle, setToggle] = useState("Clear")
 
   return (
@@ -19,7 +19,7 @@ export default function AltAggregate({ data, searchData }) {
           case "Dark":
             return <Dark />
           case "Archive":
-            return <Search allResults={searchData.archive} />
+            return <Search />
           default:
             return null
         }

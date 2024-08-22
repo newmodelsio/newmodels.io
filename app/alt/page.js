@@ -5,24 +5,24 @@ import Footer from "../components/Footer"
 import AltNav from "../components/AltNav"
 
 export default async function Main() {
-  // const response = await fetch(`https://newmodels.io/2024.json`, {
-  //   cache: "no-store",
-  // })
-  // const data = await response.json()
+  const response = await fetch(`https://newmodels.io/2024.json`, {
+    cache: "no-store",
+  })
+  const data = await response.json()
 
-  const [homeResponse, searchResponse] = await Promise.all([
-    fetch("https://newmodels.io/2024.json", {
-      cache: "no-store",
-    }),
-    fetch("https://newmodels.io/search.json", {
-      cache: "no-store",
-    }),
-  ])
+  // const [homeResponse, searchResponse] = await Promise.all([
+  //   fetch("https://newmodels.io/2024.json", {
+  //     cache: "no-store",
+  //   }),
+  //   fetch("https://newmodels.io/search.json", {
+  //     cache: "no-store",
+  //   }),
+  // ])
 
-  const [data, searchData] = await Promise.all([
-    homeResponse.json(),
-    searchResponse.json(),
-  ])
+  // const [data, searchData] = await Promise.all([
+  //   homeResponse.json(),
+  //   searchResponse.json(),
+  // ])
 
   return (
     <>
@@ -34,7 +34,7 @@ export default async function Main() {
       <a href="/alt">
         <Logo />
       </a>
-      <AltAggregate data={data} searchData={searchData} />
+      <AltAggregate data={data} />
       <Footer />
     </>
   )
