@@ -5,7 +5,7 @@ import { useState } from "react"
 import Block from "./Block"
 
 export default function Section({ section }) {
-  const [expand, setExpand] = useState(false)
+  const [offset, setOffset] = useState(3)
 
   return (
     <div key={section.title}>
@@ -22,20 +22,33 @@ export default function Section({ section }) {
           )}
           {section.posts && (
             <>
-              {section.posts.slice(0, 3).map((block) => (
+              {section.posts.slice(0, offset).map((block) => (
                 <Block key={block.id} block={block} />
               ))}
               {section.posts.length > 3 && (
-                <div
-                  className="flex items-center justify-end cursor-pointer text-zinc-800 uppercase text-[10px]"
-                  onClick={() => {
-                    setExpand(true)
-                  }}
-                >
-                  View More{" "}
-                  <span className="bg-black text-white font-bold flex justify-center items-center rounded-full px-1 ml-2">
-                    {section.posts.length - 3}+
-                  </span>
+                <div>
+                  {section.posts.length - offset > 0 ? (
+                    <div
+                      className="flex items-center justify-end cursor-pointer text-zinc-800 uppercase text-[10px]"
+                      onClick={() => {
+                        setOffset(offset + 10)
+                      }}
+                    >
+                      View More{" "}
+                      <span className="bg-black text-white font-bold flex justify-center items-center rounded-full px-1 ml-2">
+                        {section.posts.length - offset}+
+                      </span>
+                    </div>
+                  ) : (
+                    <div
+                      className="flex items-center justify-end cursor-pointer text-zinc-800 uppercase text-[10px]"
+                      onClick={() => {
+                        setOffset(3)
+                      }}
+                    >
+                      Hide
+                    </div>
+                  )}
                 </div>
               )}
             </>
