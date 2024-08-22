@@ -13,12 +13,14 @@ export default function Post({ block }) {
   return (
     <div key={block.id} className="hover:underline">
       <a href={block.url} target="_blank" className={block.modifiers}>
-        {random == 2 && (
-          <img
-            src={block.thumbnail}
-            className="max-w-[125px] max-h-[125px] mb-1"
-            alt=""
-          />
+        {block.thumbnail && random == 2 && (
+          <div className="w-[125px] aspect-square bg-zinc-100 mb-1">
+            <img
+              src={block.thumbnail}
+              className="w-full h-full object-cover"
+              alt=""
+            />
+          </div>
         )}
         <div
           dangerouslySetInnerHTML={{ __html: block.text.replace("<br>", "") }}
