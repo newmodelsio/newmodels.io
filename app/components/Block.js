@@ -19,13 +19,13 @@ export default function Block({ block }) {
                   dangerouslySetInnerHTML={{ __html: block.text }}
                 ></div>
               )
-            // case "heading":
-            //   return (
-            //     <div
-            //       className="font-bold mb-5"
-            //       dangerouslySetInnerHTML={{ __html: block.text }}
-            //     ></div>
-            //   )
+            case "heading":
+              return (
+                <div
+                  className="font-bold mb-5 leading-normal"
+                  dangerouslySetInnerHTML={{ __html: block.text }}
+                ></div>
+              )
             // case "gallery":
             //   return (
             //     <div className="grid grid-cols-3">

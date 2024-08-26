@@ -19,8 +19,8 @@ export default async function Page({ params }) {
       <Link href="../../">
         <Logo />
       </Link>
-      <Nav nav={data.nav} />
-      <div className="prose max-w-xl mx-auto text-lg flex flex-col gap-5 my-10 p-5">
+      {/* <Nav nav={data.nav} /> */}
+      <div className="prose max-w-2xl mx-auto text-lg flex flex-col gap-5 my-10 p-5">
         {data.blocks.map((block) => (
           <Block key={block.id} block={block} />
         ))}
