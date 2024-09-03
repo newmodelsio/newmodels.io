@@ -65,21 +65,70 @@ export default function AltNav() {
                 Berlin.
               </p>
               <p>
-                NM pods are hosted by <strong>Caroline Busta</strong>,{" "}
-                <strong>Lil Internet</strong>, & <strong>Daniel Keller</strong>.
+                NM pods are hosted by{" "}
+                <strong>
+                  <a href="https://carolinebusta.github.io/" target="_blank">
+                    Caroline Busta
+                  </a>
+                </strong>
+                ,{" "}
+                <strong>
+                  <a href="https://twitter.com/LILINTERNET" target="_blank">
+                    Lil Internet
+                  </a>
+                </strong>
+                , &{" "}
+                <strong>
+                  <a href="https://twitter.com/DnlKlr" target="_blank">
+                    Daniel Keller
+                  </a>
+                </strong>
+                .
               </p>
               <p>
                 The NM community is a digital local distributed worldwide via
                 Discord with light leaks to the dark side of newmodels.io and
-                maintained by <strong>Leïth Benkhedda</strong>
+                maintained by{" "}
+                <strong>
+                  <a
+                    href="https://newmodels.io/www.instagram.com/451_232"
+                    target="_blank"
+                  >
+                    Leïth Benkhedda
+                  </a>
+                </strong>
               </p>
               <p>
-                In summer 2021, the NM community published the NM Codex Y2K20
-                and the NM Webdex.
+                In summer 2021, the NM community published the{" "}
+                <a
+                  href="https://shop.newmodels.io/product/codex-y2k20-2"
+                  target="_blank"
+                >
+                  NM Codex Y2K20
+                </a>
+                and the{" "}
+                <a href="https://webdex-y2k20.newmodels.io/" target="_blank">
+                  NM Webdex
+                </a>
+                .
               </p>
               <p>
-                Join via: <strong>Patreon</strong> or <strong>Substack</strong>
-                <br /> Join: <strong>Channel</strong>
+                Join via:{" "}
+                <strong>
+                  <a href="https://www.patreon.com/newmodels">Patreon</a>
+                </strong>{" "}
+                or{" "}
+                <strong>
+                  <a href="https://newmodels.substack.com/" target="_blank">
+                    Substack
+                  </a>
+                </strong>
+                <br /> Join:{" "}
+                <strong>
+                  <a href="https://channel.xyz/" target="_blank">
+                    Channel
+                  </a>
+                </strong>
               </p>
               <p>
                 Contact: desk(at)newmodels.io
