@@ -90,10 +90,7 @@ export default function AltNav() {
                 Discord with light leaks to the dark side of newmodels.io and
                 maintained by{" "}
                 <strong>
-                  <a
-                    href="https://newmodels.io/www.instagram.com/451_232"
-                    target="_blank"
-                  >
+                  <a href="https://www.instagram.com/451_232" target="_blank">
                     Leïth Benkhedda
                   </a>
                 </strong>
