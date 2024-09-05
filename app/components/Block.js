@@ -15,7 +15,7 @@ export default function Block({ block }) {
             case "text":
               return (
                 <div
-                  className={block.modifiers + " pb-5 border-b"}
+                  className={block.modifiers}
                   dangerouslySetInnerHTML={{ __html: block.text }}
                 ></div>
               )
