@@ -4,17 +4,17 @@ export default function ClearMinimal({ data }) {
   return (
     <>
       <div className="grid md:grid-cols-3 divide-x">
-        <div className="flex flex-col px-5 gap-5">
+        <div className="flex flex-col px-5 gap-5 mb-5">
           {data.columnA.map((block) => (
             <Block key={block.id} block={block} />
           ))}
         </div>
-        <div className="flex flex-col px-5 gap-5">
+        <div className="flex flex-col px-5 gap-5 mb-5">
           {data.columnB.map((block) => (
             <Block key={block.id} block={block} />
           ))}
         </div>
-        <div className="flex flex-col px-5 gap-5">
+        <div className="flex flex-col px-5 gap-5 mb-5">
           {data.columnC.map((block) => (
             <Block key={block.id} block={block} />
           ))}

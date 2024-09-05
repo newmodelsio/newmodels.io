@@ -22,7 +22,7 @@ export default function DiscordPost({ post }) {
                   className="flex flex-col gap-3"
                   target="_blank"
                 >
-                  <div className="text-[#1daaf9] font-bold">{embed.title}</div>
+                  <div className="text-[#1daaf9]">{embed.title}</div>
                   <div className="text-zinc-300">{embed.description}</div>
                   {embed.thumbnail && (
                     <div className="rounded overflow-hidden">
