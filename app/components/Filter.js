@@ -31,6 +31,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("published", "2024")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">2024</div>
@@ -40,6 +41,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("published", "2023")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">2023</div>
@@ -49,6 +51,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("published", "2022")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">2022</div>
@@ -58,6 +61,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("published", "2021")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">2021</div>
@@ -67,6 +71,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("published", "2020")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">2020</div>
@@ -76,6 +81,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("published", "2019")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">2019</div>
@@ -85,6 +91,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("published", "2018")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">2018</div>
@@ -94,6 +101,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("published", "2017")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">2017</div>
@@ -106,6 +114,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("type", "audio")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">NM Podcast</div>
@@ -115,6 +124,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("tags", "NMEditorial")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">NM Editorial</div>
@@ -124,6 +134,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("tags", "NMProjects")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">NM Projects</div>
@@ -133,6 +144,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("title", "TopSoil")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">NM TopSoil</div>
@@ -142,6 +154,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("title", "Dispatch")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline"> NM DISPATCH</div>
@@ -151,6 +164,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("tags", "NMTV")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">NM TV</div>
@@ -160,6 +174,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("title", "Lecture")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">NM LECTURES</div>
@@ -169,6 +184,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("title", "Special Report")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">NM SPECIAL REPORTS</div>
@@ -178,6 +194,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("title", "Short")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">NM SHORTS</div>
@@ -187,6 +204,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("title", "Greenroom")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">NM GREENROOM</div>
@@ -199,6 +217,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("type", "")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">All</div>
@@ -208,6 +227,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("type", "video")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">Video</div>
@@ -217,6 +237,7 @@ export default function Filter({ allResults, handleChange, input }) {
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
                 handleChange("type", "audio")
+                setToggleFilter(false)
               }}
             >
               <div className="hover:underline">Audio</div>
