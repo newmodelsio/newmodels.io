@@ -7,6 +7,8 @@ export default function Search() {
   const [allResults, setAllResults] = useState()
   const [results, setResults] = useState()
 
+  const [input, setInput] = useState("")
+
   async function loadData() {
     const response = await fetch(`https://newmodels.io/search.json`, {
       cache: "no-store",
@@ -17,7 +19,10 @@ export default function Search() {
 
   function handleChange(key, value) {
     const updatedResulted = allResults.filter((item) => {
-      return item[key].toLowerCase().includes(value.toLowerCase())
+      return (
+        item[key].toLowerCase().includes(value.toLowerCase()) &&
+        item["title"].toLowerCase().includes(input.toLowerCase())
+      )
     })
     setResults(updatedResulted)
   }
@@ -30,6 +35,12 @@ export default function Search() {
     setResults(allResults)
   }, [allResults])
 
+  useEffect(() => {
+    if (input) {
+      handleChange("title", input)
+    }
+  }, [input])
+
   return (
     <>
       <div className="w-full border-b divide-x divide-zinc-300">
@@ -40,7 +51,8 @@ export default function Search() {
               type="text"
               placeholder="Search New Models"
               onChange={(e) => {
-                handleChange("title", e.target.value)
+                // handleChange("title", e.target.value)
+                setInput(e.target.value)
               }}
             />
             <svg
@@ -59,14 +71,21 @@ export default function Search() {
       </div>
       {allResults ? (
         <>
-          {results?.length > 0 && (
-            <Filter allResults={allResults} handleChange={handleChange} />
-          )}
+          {/* {results?.length > 0 && ( */}
+          <Filter
+            allResults={allResults}
+            handleChange={handleChange}
+            input={input}
+          />
+          {/* )} */}
           <br />
           {results?.length > 0 ? (
-            <div className="p-5 md:columns-3 gap-5">
+            <div className="p-5 md:columns-3 gap-5 min-h-screen">
               {results.map((result, index) => (
-                <div key={index} className="flex flex-col mb-5">
+                <div
+                  key={index}
+                  className="flex flex-col mb-5 break-inside-avoid-column	"
+                >
                   <a href={result.link} target="_blank">
                     <div
                       className="text-xs"

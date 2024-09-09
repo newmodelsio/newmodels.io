@@ -1,18 +1,19 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
-export default function Filter({ allResults, handleChange }) {
+export default function Filter({ allResults, handleChange, input }) {
   const [toggleFilter, setToggleFilter] = useState(false)
+
   function countItems(key, string) {
     return allResults.filter((item) => {
-      return item[key] && item[key].includes(string)
+      return (
+        item[key] &&
+        item[key].includes(string) &&
+        item["title"].toLowerCase().includes(input.toLowerCase())
+      )
     }).length
   }
-
-  // useEffect(() => {
-  //   setToggleFilter(false)
-  // }, [handleChange])
 
   return (
     <>

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { getDiscord } from "../api/discord"
 
 const Placeholder = () => (
-  <div className="flex flex-col gap-5">
+  <div className="flex flex-col gap-5 animate-pulse">
     <div className="w-full bg-[#2b2d31] aspect-square rounded"></div>
     <div className="flex flex-col gap-2">
       <div className="w-full bg-[#2b2d31] p-3 rounded"></div>
