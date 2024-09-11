@@ -35,7 +35,7 @@ export default function Section({ section }) {
                       }}
                     >
                       View More{" "}
-                      <span className="bg-black text-white font-bold flex justify-center items-center rounded-full px-1 ml-2">
+                      <span className="bg-black text-white font-bold flex justify-center items-center rounded-full px-1 pl-[5px] ml-2">
                         {section.posts.length - offset}+
                       </span>
                     </div>
