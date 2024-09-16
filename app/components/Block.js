@@ -26,21 +26,21 @@ export default function Block({ block }) {
                   dangerouslySetInnerHTML={{ __html: block.text }}
                 ></div>
               )
-            // case "gallery":
-            //   return (
-            //     <div className="grid grid-cols-3">
-            //       {block.images.map((image, i) => (
-            //         <a
-            //           href={image.url}
-            //           key={image.id + i}
-            //           target="_blank"
-            //           className="flex m-1  aspect-square bg-gray-100 hover:opacity-80"
-            //         >
-            //           <Image src={image.src} alt="" width={300} height={300} />
-            //         </a>
-            //       ))}
-            //     </div>
-            //   )
+            case "gallery":
+              return (
+                <div className="grid grid-cols-3">
+                  {block.images.map((image, i) => (
+                    <a
+                      href={image.url}
+                      key={image.id + i}
+                      target="_blank"
+                      className="flex m-1  aspect-square bg-gray-100 hover:opacity-80"
+                    >
+                      <Image src={image.src} alt="" width={300} height={300} />
+                    </a>
+                  ))}
+                </div>
+              )
             case "image":
               return (
                 <div className="flex flex-wrap">

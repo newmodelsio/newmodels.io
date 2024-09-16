@@ -4,7 +4,7 @@ export default function Clear({ columns }) {
   return (
     <>
       <div className="grid md:grid-cols-3 divide-x">
-        <div className="flex flex-col p-5">
+        <div className="flex flex-col p-5 gap-5">
           {columns.columnA.map((block) => (
             <Block key={block.id} block={block} />
           ))}
@@ -14,7 +14,7 @@ export default function Clear({ columns }) {
             ))}
           </div>
         </div>
-        <div className="flex flex-col p-5">
+        <div className="flex flex-col p-5 gap-5">
           {columns.columnB.map((block) => (
             <Block key={block.id} block={block} />
           ))}
@@ -24,11 +24,11 @@ export default function Clear({ columns }) {
             ))}
           </div>
         </div>
-        <div className="flex flex-col p-5">
+        <div className="flex flex-col p-5 gap-5">
           {columns.columnC.map((block) => (
             <Block key={block.id} block={block} />
           ))}
-          <div className="hidden md:block">
+          <div className="hidden md:block gap-5">
             {columns.columnF?.map((block) => (
               <Block key={block.id} block={block} />
             ))}
