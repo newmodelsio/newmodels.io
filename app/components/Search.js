@@ -18,13 +18,15 @@ export default function Search() {
   }
 
   function handleChange(key, value) {
-    const updatedResulted = allResults.filter((item) => {
-      return (
-        item[key].toLowerCase().includes(value.toLowerCase()) &&
-        item["title"].toLowerCase().includes(input.toLowerCase())
-      )
-    })
-    setResults(updatedResulted)
+    if (allResults) {
+      const updatedResulted = allResults.filter((item) => {
+        return (
+          item[key].toLowerCase().includes(value.toLowerCase()) &&
+          item["title"].toLowerCase().includes(input.toLowerCase())
+        )
+      })
+      setResults(updatedResulted)
+    }
   }
 
   useEffect(() => {
