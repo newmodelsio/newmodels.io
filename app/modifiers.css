@@ -4,7 +4,7 @@
 
 .highlight p {
   display: inline;
-  padding: 2px;
+  padding: 3px 0px;
   background-color: yellow;
 }
 
@@ -35,6 +35,7 @@
 }
 
 .shake {
+  display: block;
   animation-name: shake;
   animation-duration: 0.5s;
   transform-origin: 50% 50%;

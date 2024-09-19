@@ -3,7 +3,7 @@
 import { useState } from "react"
 
 export default function Filter({ allResults, handleChange, input }) {
-  const [toggleFilter, setToggleFilter] = useState(false)
+  const [toggleFilter, setToggleFilter] = useState(true)
 
   function countItems(key, string) {
     return allResults.filter((item) => {
@@ -17,12 +17,12 @@ export default function Filter({ allResults, handleChange, input }) {
 
   return (
     <>
-      <div
+      {/* <div
         className="p-5 text-center uppercase text-[11px] border-b cursor-pointer"
         onClick={() => setToggleFilter(!toggleFilter)}
       >
         {toggleFilter ? "Filters –" : "Filters +"}
-      </div>
+      </div> */}
       {toggleFilter && (
         <div className="grid  md:grid-cols-3 divide-x w-full uppercase text-sm border-b">
           <div className="flex flex-col p-5">
