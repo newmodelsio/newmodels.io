@@ -105,11 +105,11 @@ export default function Filter({ allResults, handleChange, input }) {
             <div
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
-                handleChange("tags", "nm-podcasts")
+                handleChange("tags", "nm-podcast")
               }}
             >
               <div className="hover:underline">NM Podcast</div>
-              <div>({countItems("tags", "nm-podcasts")})</div>
+              <div>({countItems("tags", "nm-podcast")})</div>
             </div>
             <div
               className="flex gap-[4px] cursor-pointer"
