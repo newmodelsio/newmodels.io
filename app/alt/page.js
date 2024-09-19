@@ -35,7 +35,7 @@ export default async function Main() {
         <Logo />
       </a>
       <AltAggregate data={data} />
-      <Footer />
+      <Footer data={data} />
     </>
   )
 }
