@@ -108,9 +108,6 @@ export default function Search() {
         </>
       ) : (
         <>
-          <div className="p-5 text-center uppercase text-[11px] border-b cursor-pointer">
-            <div className="opacity-0">Loading…</div>
-          </div>
           <div className="p-5 md:columns-3 min-h-screen">
             {(() => {
               const arr = []
