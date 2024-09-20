@@ -114,83 +114,83 @@ export default function Filter({ allResults, handleChange, input }) {
             <div
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
-                handleChange("tags", "NMEditorial")
+                handleChange("tags", "nm-editorial")
               }}
             >
               <div className="hover:underline">NM Editorial</div>
-              <div>({countItems("tags", "NMEditorial")})</div>
+              <div>({countItems("tags", "nm-editorial")})</div>
             </div>
             <div
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
-                handleChange("tags", "NMProjects")
+                handleChange("tags", "nm-projects")
               }}
             >
               <div className="hover:underline">NM Projects</div>
-              <div>({countItems("tags", "NMProjects")})</div>
+              <div>({countItems("tags", "nm-projects")})</div>
             </div>
             <div
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
-                handleChange("title", "TopSoil")
+                handleChange("tags", "nm-topsoil")
               }}
             >
               <div className="hover:underline">NM TopSoil</div>
-              <div>({countItems("title", "TopSoil")})</div>
+              <div>({countItems("tags", "nm-topsoil")})</div>
             </div>
             <div
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
-                handleChange("title", "Dispatch")
+                handleChange("tags", "nm-dispatch")
               }}
             >
               <div className="hover:underline"> NM DISPATCH</div>
-              <div>({countItems("title", "Dispatch")})</div>
+              <div>({countItems("tags", "nm-dispatch")})</div>
             </div>
             <div
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
-                handleChange("tags", "NMTV")
+                handleChange("tags", "nm-tv")
               }}
             >
               <div className="hover:underline">NM TV</div>
-              <div>({countItems("tags", "NMTV")})</div>
+              <div>({countItems("tags", "nm-tv")})</div>
             </div>
             <div
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
-                handleChange("title", "Lecture")
+                handleChange("tags", "nm-lectures")
               }}
             >
               <div className="hover:underline">NM LECTURES</div>
-              <div>({countItems("title", "Lecture")})</div>
+              <div>({countItems("tags", "nm-lectures")})</div>
             </div>
             <div
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
-                handleChange("title", "Special Report")
+                handleChange("tags", "nm-special-report")
               }}
             >
-              <div className="hover:underline">NM SPECIAL REPORTS</div>
-              <div>({countItems("title", "Special Report")})</div>
+              <div className="hover:underline">NM SPECIAL REPORT</div>
+              <div>({countItems("tags", "nm-special-report")})</div>
             </div>
             <div
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
-                handleChange("title", "Short")
+                handleChange("tags", "nm-short")
               }}
             >
               <div className="hover:underline">NM SHORTS</div>
-              <div>({countItems("title", "Short")})</div>
+              <div>({countItems("tags", "nm-short")})</div>
             </div>
             <div
               className="flex gap-[4px] cursor-pointer"
               onClick={() => {
-                handleChange("title", "Greenroom")
+                handleChange("tags", "nm-greenroom")
               }}
             >
               <div className="hover:underline">NM GREENROOM</div>
-              <div>({countItems("title", "Greenroom")})</div>
+              <div>({countItems("tags", "nm-greenroom")})</div>
             </div>
           </div>
           <div className="flex flex-col p-5">
