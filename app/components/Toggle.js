@@ -22,6 +22,16 @@ export default function Toggle({ toggle, setToggle }) {
         >
           Dark
         </div>
+        <div
+          className={
+            toggle == "Archive"
+              ? "p-3 px-4 rounded text-zinc-700 bg-white shadow-sm"
+              : "p-3 px-4 rounded text-zinc-400"
+          }
+          onClick={() => setToggle("Archive")}
+        >
+          Archive
+        </div>
       </div>
     </div>
   )

@@ -1,19 +1,29 @@
 "use client"
 
-import Clear from "../components/Clear"
 import Dark from "../components/Dark"
 import Toggle from "../components/Toggle"
-import Nav from "../components/Nav"
+import Search from "../components/Search"
 import { useState } from "react"
+import Clear from "../components/Clear"
 
-export default function Aggregate({ columns, nav }) {
+export default function AltAggregate({ data }) {
   const [toggle, setToggle] = useState("Clear")
 
   return (
     <>
       <Toggle toggle={toggle} setToggle={setToggle} />
-      <Nav nav={nav} />
-      {toggle == "Clear" ? <Clear columns={columns} /> : <Dark />}
+      {(() => {
+        switch (toggle) {
+          case "Clear":
+            return <Clear data={data} />
+          case "Dark":
+            return <Dark />
+          case "Archive":
+            return <Search />
+          default:
+            return null
+        }
+      })()}
     </>
   )
 }

@@ -1,6 +1,10 @@
 "use client"
 
 export default function Footer({ data }) {
+  const date = new Date().toLocaleDateString("en-gb", {
+    year: "numeric",
+  })
+
   return (
     <div className="text-[11px] border-t  flex flex-col md:flex-row items-center justify-between uppercase">
       {data && (
@@ -9,7 +13,7 @@ export default function Footer({ data }) {
           dangerouslySetInnerHTML={{ __html: data.footer }}
         ></div>
       )}
-      <div className="p-5 whitespace-nowrap">© 2024 NEW MODELS</div>
+      <div className="p-5 whitespace-nowrap">© {date} NEW MODELS</div>
     </div>
   )
 }
