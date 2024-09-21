@@ -89,13 +89,15 @@ export default function Search() {
                   className="flex flex-col mb-5 break-inside-avoid-column	"
                 >
                   <a href={result.link} target="_blank">
-                    <div
-                      className="text-xs"
-                      dangerouslySetInnerHTML={{ __html: result.published }}
-                    ></div>
-                    <div className="flex gap-2 text-xs uppercase">
-                      {result.type?.includes("audio") && <div>Audio</div>}
-                      {result.type?.includes("video") && <div>Video</div>}
+                    <div className="flex gap-2">
+                      <div
+                        className="text-xs"
+                        dangerouslySetInnerHTML={{ __html: result.published }}
+                      ></div>
+                      <div className="flex gap-2 text-xs uppercase">
+                        {result.type?.includes("audio") && <div>🎧</div>}
+                        {result.type?.includes("video") && <div>📹</div>}
+                      </div>
                     </div>
                     <div
                       dangerouslySetInnerHTML={{ __html: result.title }}
