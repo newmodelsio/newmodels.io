@@ -11,10 +11,10 @@ export default function Search() {
 
   async function loadData() {
     const response = await fetch(
-      `https://assets.wkk.pyw.mybluehost.me/search.json`,
-      {
-        cache: "no-store",
-      }
+      `https://assets.wkk.pyw.mybluehost.me/search.json`
+      // {
+      //   cache: "no-store",
+      // }
     )
     const data = await response.json()
     setAllResults(data.archive)
