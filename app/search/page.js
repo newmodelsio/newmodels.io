@@ -5,7 +5,9 @@ import Search from "../components/Search"
 import Footer from "../components/Footer"
 
 export default async function Page() {
-  const response = await fetch(`https://www.newmodels.io/search.json`)
+  const response = await fetch(
+    `http://assets.wkk.pyw.mybluehost.me/search.json`
+  )
   const data = await response.json()
 
   return (

@@ -5,9 +5,12 @@ import Footer from "./components/Footer"
 import Nav from "./components/Nav"
 
 export default async function Main() {
-  const response = await fetch(`https://www.newmodels.io/backup.json`, {
-    cache: "no-store",
-  })
+  const response = await fetch(
+    `http://assets.wkk.pyw.mybluehost.me/2024.json`,
+    {
+      cache: "no-store",
+    }
+  )
   const data = await response.json()
 
   return (
