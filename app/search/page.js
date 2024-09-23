@@ -5,7 +5,7 @@ import Search from "../components/Search"
 import Footer from "../components/Footer"
 
 export default async function Page() {
-  const response = await fetch(`https://newmodels.io/search.json`)
+  const response = await fetch(`search.json`)
   const data = await response.json()
 
   // const ordered = results.archive.sort(function (a, b) {
