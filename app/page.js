@@ -6,7 +6,7 @@ import Nav from "./components/Nav"
 
 export default async function Main() {
   const response = await fetch(
-    `http://assets.wkk.pyw.mybluehost.me/2024.json`,
+    `https://assets.wkk.pyw.mybluehost.me/2024.json`,
     {
       cache: "no-store",
     }

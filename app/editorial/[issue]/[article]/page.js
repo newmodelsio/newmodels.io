@@ -7,7 +7,7 @@ import Footer from "../../../components/Footer"
 
 export default async function Page({ params }) {
   const response = await fetch(
-    `http://assets.wkk.pyw.mybluehost.me/editorial/${params.issue}/${params.article}.json`
+    `https://assets.wkk.pyw.mybluehost.me/editorial/${params.issue}/${params.article}.json`
   )
   const data = await response.json()
 

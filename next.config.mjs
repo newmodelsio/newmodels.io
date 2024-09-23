@@ -16,7 +16,7 @@ const nextConfig = {
         pathname: "**",
       },
       {
-        protocol: "http",
+        protocol: "https",
         hostname: "assets.wkk.pyw.mybluehost.me",
         port: "",
         pathname: "**",
