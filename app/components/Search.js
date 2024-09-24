@@ -11,7 +11,7 @@ export default function Search() {
 
   async function loadData() {
     const response = await fetch(
-      `https://assets.wkk.pyw.mybluehost.me/search.json`
+      `https://assets.newmodels.io/search.json`
       // {
       //   cache: "no-store",
       // }
