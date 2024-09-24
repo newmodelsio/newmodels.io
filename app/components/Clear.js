@@ -22,7 +22,7 @@ export default function ClearMinimal({ data }) {
         </div>
       </div>
       <div className="p-5 border-t">
-        <strong>SOME LEGACY SOURCES</strong>
+        <strong>NEWSSTAND</strong>
         <div
           className="columns-2 md:columns-3"
           dangerouslySetInnerHTML={{ __html: data.links }}
