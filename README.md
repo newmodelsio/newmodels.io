@@ -27,4 +27,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## CMS
 
-The CMS is built [KirbyCMS](https://getkirby.com/), and is hosted on Bluehost. Contact desk@newmodels.io for access.
+The CMS is built [KirbyCMS](https://getkirby.com/), and is hosted on Bluehost at assets.newmodels.io/panel. Contact desk@newmodels.io for access.
