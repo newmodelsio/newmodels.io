@@ -17,7 +17,10 @@ export default function Post({ block }) {
           <div className="w-[125px] aspect-square bg-zinc-100 mb-1">
             <img
               src={block.thumbnail}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover opacity-0 transition-opacity"
+              onLoad={(e) => {
+                e.currentTarget.classList.remove("opacity-0")
+              }}
               alt=""
             />
           </div>
