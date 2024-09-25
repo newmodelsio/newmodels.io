@@ -11,20 +11,6 @@
   text-decoration: underline;
 }
 
-/* @font-face {
-  font-family: "Grotesk";
-  font-display: block;
-  font-weight: 400;
-  src: url("/fonts/custom-font.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Grotesk";
-  font-display: block;
-  font-weight: 700;
-  src: url("/fonts/Grotesk.woff2") format("woff2");
-} */
-
 html,
 body {
   font-family: Helvetica, sans-serif;
@@ -49,6 +35,7 @@ body {
 .prose p {
   margin-bottom: 15px;
 }
+
 .prose img {
   width: 100%;
 }

@@ -41,7 +41,7 @@ export default function Dark() {
 
   return (
     <>
-      <div className="md:hidden block top-0 overflow-y-scroll p-5 border-b border-zinc-600 flex gap-5 justify-between uppercase text-[11px] bg-[#36393f] text-zinc-300">
+      <div className="md:hidden top-0 overflow-y-scroll p-5 border-b border-zinc-600 flex gap-5 justify-between uppercase text-[11px] bg-[#36393f] text-zinc-300">
         <div className="flex w-full gap-5 justify-between ">
           <a href="#top-links">#TOP-LINKS</a>
           <a href="#nm-discord-replies">#NM-DISCORD-REPLIES</a>
