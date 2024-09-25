@@ -10,7 +10,7 @@ export default function Section({ section }) {
   return (
     <div key={section.title}>
       <div>
-        <div className="flex flex-col gap-5 border-b pb-5">
+        <div className="section flex flex-col gap-5 border-b pb-5">
           {section.title && (
             <div>
               <div className="font-bold uppercase">{section.title}</div>

@@ -5,17 +5,19 @@ export default function ClearMinimal({ data }) {
     <>
       <div className="grid md:grid-cols-3 divide-x">
         <div className="flex flex-col px-5 gap-5 mb-5">
+          <div className="w-full border-t "></div>
           {data.columnA.map((block) => (
             <Block key={block.id} block={block} />
           ))}
         </div>
         <div className="flex flex-col px-5 gap-5 mb-5">
-          <div className="w-full border-t md:hidden"></div>
+          <div className="w-full border-t "></div>
           {data.columnB.map((block) => (
             <Block key={block.id} block={block} />
           ))}
         </div>
         <div className="flex flex-col px-5 gap-5 mb-5">
+          <div className="w-full border-t "></div>
           {data.columnC.map((block) => (
             <Block key={block.id} block={block} />
           ))}
