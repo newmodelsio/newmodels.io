@@ -1,6 +1,7 @@
 import Logo from "./components/Logo"
 import Aggregate from "./components/Aggregate"
 import Footer from "./components/Footer"
+import Nav from "./components/Nav"
 
 export default async function Main() {
   const response = await fetch(`https://assets.newmodels.io/home.json`, {
@@ -19,6 +20,7 @@ export default async function Main() {
       <a href="/">
         <Logo />
       </a>
+      <Nav data={data} />
       <Aggregate data={data} />
       <Footer data={data} />
     </>

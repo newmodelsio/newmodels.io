@@ -56,7 +56,6 @@ export default function Search() {
               type="text"
               placeholder="Search New Models"
               onChange={(e) => {
-                // handleChange("title", e.target.value)
                 setInput(e.target.value)
               }}
             />
@@ -88,7 +87,7 @@ export default function Search() {
             <div className="p-5 md:columns-3 gap-5 min-h-screen">
               {results.map((result, index) => (
                 <div
-                  key={index}
+                  key={"result" + index}
                   className="flex flex-col mb-5 break-inside-avoid-column	"
                 >
                   <a href={result.link} target="_blank">

@@ -1,5 +1,6 @@
 import "./globals.css"
 import "./modifiers.css"
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 export const metadata = {
   title: "NEW MODELS 2024®",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>{children}</body>
+      <GoogleAnalytics gaId="GTM-KNRX8VRH" />
     </html>
   )
 }
