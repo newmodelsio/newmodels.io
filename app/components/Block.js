@@ -19,6 +19,13 @@ export default function Block({ block }) {
                   dangerouslySetInnerHTML={{ __html: block.text }}
                 ></div>
               )
+            case "heading":
+              return (
+                <div
+                  className="font-bold mb-5 leading-normal"
+                  dangerouslySetInnerHTML={{ __html: block.text }}
+                ></div>
+              )
             case "image":
               return (
                 <div className="flex flex-wrap">
