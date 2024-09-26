@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Filter from "./Filter"
 
 export default function Search() {
-  const [allResults, setAllResults] = useState()
+  const [json, setJson] = useState()
   const [results, setResults] = useState()
 
   const [input, setInput] = useState("")
@@ -14,12 +14,12 @@ export default function Search() {
       cache: "no-store",
     })
     const data = await response.json()
-    setAllResults(data)
+    setJson(data)
   }
 
   function handleChange(key, value) {
-    if (allResults) {
-      const updatedResulted = allResults.archive.filter((item) => {
+    if (json) {
+      const updatedResulted = json.archive.filter((item) => {
         return (
           item[key].toLowerCase().includes(value.toLowerCase()) &&
           item["title"].toLowerCase().includes(input.toLowerCase())
@@ -34,10 +34,10 @@ export default function Search() {
   }, [])
 
   useEffect(() => {
-    if (allResults?.archive) {
-      setResults(allResults.archive)
+    if (json?.archive) {
+      setResults(json.archive)
     }
-  }, [allResults])
+  }, [json])
 
   useEffect(() => {
     if (input) {
@@ -72,11 +72,14 @@ export default function Search() {
           </div>
         </div>
       </div>
-      {allResults ? (
+      {json ? (
         <>
           {/* {results?.length > 0 && ( */}
           <Filter
-            allResults={allResults}
+            allResults={json.archive}
+            filterByYear={json.year}
+            filterByCategory={json.category}
+            filterByType={json.type}
             handleChange={handleChange}
             input={input}
           />

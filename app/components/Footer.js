@@ -9,7 +9,7 @@ export default function Footer({ data }) {
     <div className="text-[11px] border-t  flex flex-col md:flex-row items-center justify-between uppercase">
       {data && (
         <div
-          className="p-5 w-full md:flex md:flex-row gap-7 grid grid-cols-2"
+          className="p-5 w-full md:flex md:flex-row gap-7 grid grid-cols-2 whitespace-nowrap"
           dangerouslySetInnerHTML={{ __html: data.footer }}
         ></div>
       )}

@@ -2,11 +2,18 @@
 
 import { useState } from "react"
 
-export default function Filter({ allResults, handleChange, input }) {
+export default function Filter({
+  allResults,
+  filterByYear,
+  filterByCategory,
+  filterByType,
+  handleChange,
+  input,
+}) {
   const [toggleFilter, setToggleFilter] = useState(true)
 
   function countItems(key, string) {
-    return allResults.archive.filter((item) => {
+    return allResults.filter((item) => {
       return (
         item[key] &&
         item[key].includes(string) &&
@@ -27,7 +34,7 @@ export default function Filter({ allResults, handleChange, input }) {
         <div className="grid  md:grid-cols-3 divide-x w-full uppercase text-sm border-b">
           <div className="flex flex-col p-5">
             <div className="font-bold">Year</div>
-            {allResults.year.map((item) => (
+            {filterByYear.map((item) => (
               <div
                 key={item.slug}
                 className="flex gap-[4px] cursor-pointer"
@@ -42,7 +49,7 @@ export default function Filter({ allResults, handleChange, input }) {
           </div>
           <div className="flex flex-col p-5">
             <div className="font-bold">Category</div>
-            {allResults.category.map((item) => (
+            {filterByCategory.map((item) => (
               <div
                 key={item.slug}
                 className="flex gap-[4px] cursor-pointer"
@@ -66,7 +73,7 @@ export default function Filter({ allResults, handleChange, input }) {
               <div className="hover:underline">All</div>
               <div>({countItems("type", "")})</div>
             </div>
-            {allResults.type.map((item) => (
+            {filterByType.map((item) => (
               <div
                 key={item.slug}
                 className="flex gap-[4px] cursor-pointer"
