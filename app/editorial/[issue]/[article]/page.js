@@ -7,7 +7,10 @@ import Nav from "../../../components/Nav"
 
 export default async function Page({ params }) {
   const response = await fetch(
-    `https://assets.newmodels.io/editorial/${params.issue}/${params.article}.json`
+    `https://assets.newmodels.io/editorial/${params.issue}/${params.article}.json`,
+    {
+      cache: "no-store",
+    }
   )
   const data = await response.json()
 
