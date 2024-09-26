@@ -10,19 +10,16 @@ export default function Search() {
   const [input, setInput] = useState("")
 
   async function loadData() {
-    const response = await fetch(
-      `https://assets.newmodels.io/search.json`
-      // {
-      //   cache: "no-store",
-      // }
-    )
+    const response = await fetch(`https://assets.newmodels.io/search.json`, {
+      cache: "no-store",
+    })
     const data = await response.json()
-    setAllResults(data.archive)
+    setAllResults(data)
   }
 
   function handleChange(key, value) {
     if (allResults) {
-      const updatedResulted = allResults.filter((item) => {
+      const updatedResulted = allResults.archive.filter((item) => {
         return (
           item[key].toLowerCase().includes(value.toLowerCase()) &&
           item["title"].toLowerCase().includes(input.toLowerCase())
@@ -37,7 +34,9 @@ export default function Search() {
   }, [])
 
   useEffect(() => {
-    setResults(allResults)
+    if (allResults?.archive) {
+      setResults(allResults.archive)
+    }
   }, [allResults])
 
   useEffect(() => {
@@ -119,7 +118,10 @@ export default function Search() {
               const arr = []
               for (let i = 0; i < 30; i++) {
                 arr.push(
-                  <div className="w-full h-[20px] bg-zinc-100 mb-5 rounded animate-pulse"></div>
+                  <div
+                    key={i}
+                    className="w-full h-[20px] bg-zinc-100 mb-5 rounded animate-pulse"
+                  ></div>
                 )
               }
               return arr

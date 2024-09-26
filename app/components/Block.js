@@ -67,6 +67,10 @@ export default function Block({ block }) {
                   <div dangerouslySetInnerHTML={{ __html: block.iframe }}></div>
                 </div>
               )
+            case "quote":
+              return (
+                <div dangerouslySetInnerHTML={{ __html: block.text }}></div>
+              )
             default:
               return null
           }
