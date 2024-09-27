@@ -57,7 +57,7 @@ export default function Block({ block }) {
             case "heading":
               return (
                 <div
-                  className="font-bold mb-5 leading-normal"
+                  className="font-bold mb-5 leading-normal text-[red] text-4xl leading-tight text-center"
                   dangerouslySetInnerHTML={{ __html: block.text }}
                 ></div>
               )
@@ -69,7 +69,10 @@ export default function Block({ block }) {
               )
             case "quote":
               return (
-                <div dangerouslySetInnerHTML={{ __html: block.text }}></div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: block.text }}
+                  className="p-10"
+                ></div>
               )
             default:
               return null
