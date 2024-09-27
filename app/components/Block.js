@@ -57,7 +57,7 @@ export default function Block({ block }) {
             case "heading":
               return (
                 <div
-                  className="font-bold mb-5 leading-normal text-[red] text-4xl leading-tight text-center"
+                  className="font-bold mb-5  text-[red] text-4xl leading-tight tracking-[-0.01em] text-center"
                   dangerouslySetInnerHTML={{ __html: block.text }}
                 ></div>
               )

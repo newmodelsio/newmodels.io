@@ -22,13 +22,13 @@ export default async function Page({ params }) {
       <Link href="../../">
         <Logo />
       </Link>
-      <Nav />
+      <Nav data={data} />
       <div className="prose max-w-2xl mx-auto text-lg flex flex-col gap-5 my-10 p-5">
         {data.blocks.map((block) => (
           <Block key={block.id} block={block} />
         ))}
       </div>
-      <Footer />
+      <Footer data={data} />
     </>
   )
 }
