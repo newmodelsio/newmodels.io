@@ -53,7 +53,6 @@ export default function Block({ block }) {
               return <Post block={block} />
             case "hr":
               return <hr />
-
             case "heading":
               return (
                 <div
