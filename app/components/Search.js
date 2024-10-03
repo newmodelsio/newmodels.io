@@ -10,12 +10,9 @@ export default function Search() {
   const [input, setInput] = useState("")
 
   async function loadData() {
-    const response = await fetch(
-      `https://assets.newmodels.io/search.json`
-      //   , {
-      //   cache: "no-store",
-      // }
-    )
+    const response = await fetch(`https://assets.newmodels.io/search.json`, {
+      next: { revalidate: 60 },
+    })
     const data = await response.json()
     setJson(data)
   }

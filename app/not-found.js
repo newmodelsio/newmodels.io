@@ -5,7 +5,7 @@ import Nav from "./components/Nav"
 
 export default async function Main() {
   const response = await fetch(`https://assets.newmodels.io/home.json`, {
-    cache: "no-store",
+    next: { revalidate: 60 },
   })
   const data = await response.json()
 

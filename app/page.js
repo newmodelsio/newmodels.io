@@ -5,12 +5,9 @@ import Footer from "./components/Footer"
 import Nav from "./components/Nav"
 
 export default async function Main() {
-  const response = await fetch(
-    `https://assets.newmodels.io/home.json`
-    //   {
-    //   cache: "no-store",
-    // }
-  )
+  const response = await fetch(`https://assets.newmodels.io/home.json`, {
+    next: { revalidate: 60 },
+  })
   const data = await response.json()
 
   return (
