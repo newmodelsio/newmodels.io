@@ -5,7 +5,9 @@ import Footer from "./components/Footer"
 import Nav from "./components/Nav"
 
 export default async function Main() {
-  const response = await fetch(`https://assets.newmodels.io/home.json`)
+  const response = await fetch(`https://assets.newmodels.io/home.json`, {
+    next: { tags: ["kirby"] },
+  })
   const data = await response.json()
 
   return (

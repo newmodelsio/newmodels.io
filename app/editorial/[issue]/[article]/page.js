@@ -9,7 +9,7 @@ export default async function Page({ params }) {
   const response = await fetch(
     `https://assets.newmodels.io/editorial/${params.issue}/${params.article}.json`,
     {
-      next: { revalidate: 60 },
+      next: { tags: ["kirby"] },
     }
   )
   const data = await response.json()

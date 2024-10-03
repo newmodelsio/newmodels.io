@@ -11,7 +11,7 @@ export default function Search() {
 
   async function loadData() {
     const response = await fetch(`https://assets.newmodels.io/search.json`, {
-      next: { revalidate: 60 },
+      next: { tags: ["kirby"] },
     })
     const data = await response.json()
     setJson(data)
