@@ -28,6 +28,10 @@ body {
   font-family: "Discord";
 }
 
+iframe {
+  max-width: 100%;
+}
+
 .postContent a {
   color: #1daaf9;
 }

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useState, useEffect } from "react"
 
 export default function Post({ block }) {
@@ -23,6 +24,15 @@ export default function Post({ block }) {
               }}
               alt=""
             />
+            {/* <Image
+              src={block.thumbnail}
+              width={300}
+              height={300}
+              className="w-full h-full object-cover opacity-0 transition-opacity"
+              onLoad={(e) => {
+                e.currentTarget.classList.remove("opacity-0")
+              }}
+            /> */}
           </div>
         )}
         <div
