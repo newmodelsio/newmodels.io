@@ -3,6 +3,7 @@
 import Linkify from "../utils/linkify"
 
 export default function DiscordPost({ post }) {
+  console.log({ post })
   return (
     <>
       <div className="flex flex-col gap-3 text-lg">
@@ -44,15 +45,16 @@ export default function DiscordPost({ post }) {
           <>
             {post.attachments.map((attachment) => (
               <a href={attachment.url} key={attachment.url} target="_blank">
-                <div className=" bg-[#2b2d31] rounded border-l-4 p-4 border-zinc-900">
-                  <img
+                <div className=" bg-[#2b2d31] rounded border-l-4 p-4 border-zinc-900 text-[#1daaf9]">
+                  {/* <img
                     src={attachment.url}
                     className="opacity-0 transition-opacity"
                     onLoad={(e) => {
                       e.currentTarget.classList.remove("opacity-0")
                     }}
                     alt=""
-                  />
+                  /> */}
+                  {attachment.filename}
                 </div>
               </a>
             ))}

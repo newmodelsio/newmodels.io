@@ -22,6 +22,12 @@ export default function Linkify(inputText) {
     '<a href="mailto:$1">$1</a>'
   )
 
+  //Convert Discord Emojis
+  var replacedText = replacedText.replace(
+    /<:\w+:(\d+)>/g, // Capture the number part
+    '<img class="inline max-w-4 max-h-4" src="https://cdn.discordapp.com/emojis/$1.png" />'
+  )
+
   //Change email addresses to mailto:: links
   // var replacePattern4 = /<[\s\S]+?>/
 
