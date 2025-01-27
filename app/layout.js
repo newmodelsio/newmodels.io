@@ -2,8 +2,12 @@ import "./globals.css"
 import "./modifiers.css"
 import { GoogleAnalytics } from "@next/third-parties/google"
 
+const date = new Date().toLocaleDateString("en-gb", {
+  year: "numeric",
+})
+
 export const metadata = {
-  title: "NEW MODELS ®",
+  title: "NEW MODELS " + date + "®",
   description:
     "NEW MODELS is a media channel and community addressing the emergent effects of networked technology on culture.",
 }
