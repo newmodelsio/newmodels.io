@@ -3,7 +3,7 @@ import "./modifiers.css"
 import { GoogleAnalytics } from "@next/third-parties/google"
 
 export const metadata = {
-  title: "NEW MODELS 2024®",
+  title: "NEW MODELS ®",
   description:
     "NEW MODELS is a media channel and community addressing the emergent effects of networked technology on culture.",
 }
