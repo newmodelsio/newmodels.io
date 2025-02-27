@@ -26,14 +26,14 @@ export default function DiscordPost({ post }) {
                   <div className="text-zinc-300">{embed.description}</div>
                   {embed.thumbnail && (
                     <div className="rounded overflow-hidden">
-                      <img
+                      {/* <img
                         src={embed.thumbnail.url}
                         className="opacity-0 transition-opacity"
                         onLoad={(e) => {
                           e.currentTarget.classList.remove("opacity-0")
                         }}
                         alt=""
-                      />
+                      /> */}
                     </div>
                   )}
                 </a>

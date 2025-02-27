@@ -53,7 +53,7 @@ export default function Dark() {
           <div className="hidden md:block">#TOP-LINKS</div>
           {topLinks.length ? (
             <>
-              {topLinks.map((post) => (
+              {topLinks.slice(0, 10).map((post) => (
                 <DiscordPost key={post.id} post={post} />
               ))}
             </>
@@ -84,7 +84,7 @@ export default function Dark() {
 
           {bulletinBoard.length ? (
             <>
-              {bulletinBoard.map((post) => (
+              {bulletinBoard.slice(0, 10).map((post) => (
                 <DiscordPost key={post.id} post={post} />
               ))}
             </>

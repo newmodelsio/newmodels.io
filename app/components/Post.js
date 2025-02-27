@@ -14,7 +14,7 @@ export default function Post({ block }) {
   return (
     <div key={block.id} className="hover:underline">
       <a href={block.url} target="_blank" className={block.modifiers}>
-        {block.thumbnail && random == 2 && (
+        {/* {block.thumbnail && random == 2 && (
           <div className="w-[125px] aspect-square bg-zinc-100 mb-1">
             <img
               src={block.thumbnail}
@@ -22,9 +22,9 @@ export default function Post({ block }) {
               onLoad={(e) => {
                 e.currentTarget.classList.remove("opacity-0")
               }}
-              alt="x"
+              alt=""
             />
-            {/* <Image
+            <Image
               src={block.thumbnail}
               width={300}
               height={300}
@@ -32,9 +32,9 @@ export default function Post({ block }) {
               onLoad={(e) => {
                 e.currentTarget.classList.remove("opacity-0")
               }}
-            /> */}
+            />
           </div>
-        )}
+        )} */}
         <div
           dangerouslySetInnerHTML={{ __html: block.text.replace("<br>", "") }}
         />
