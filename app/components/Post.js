@@ -22,7 +22,7 @@ export default function Post({ block }) {
               onLoad={(e) => {
                 e.currentTarget.classList.remove("opacity-0")
               }}
-              alt=""
+              alt="x"
             />
             {/* <Image
               src={block.thumbnail}
