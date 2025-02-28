@@ -12,7 +12,7 @@ export default function FeaturedPost({ featured }) {
                 alt=""
                 // width={800}
                 // height={800}
-                priority
+                // priority
               />
               <div className="flex text-center">
                 <div

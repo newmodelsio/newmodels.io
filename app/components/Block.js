@@ -22,25 +22,13 @@ export default function Block({ block }) {
             case "image":
               return (
                 <div className="flex flex-wrap">
-                  {/* {block.link ? (
+                  {block.link ? (
                     <a href={block.link} target="_blank">
-                      <img
-                        className="w-full"
-                        src={block.src}
-                        alt=""
-                        width={1000}
-                        height={1000}
-                      />
+                      <img className="w-full" src={block.src} alt="" />
                     </a>
                   ) : (
-                    <img
-                      className="w-full"
-                      src={block.src}
-                      alt=""
-                      width={1000}
-                      height={1000}
-                    />
-                  )} */}
+                    <img className="w-full" src={block.src} alt="" />
+                  )}
                   {block.caption && (
                     <div
                       className="my-2 text-xs"

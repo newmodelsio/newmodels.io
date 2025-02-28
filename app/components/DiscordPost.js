@@ -26,14 +26,14 @@ export default function DiscordPost({ post }) {
                   <div className="text-zinc-300">{embed.description}</div>
                   {embed.thumbnail && (
                     <div className="rounded overflow-hidden">
-                      {/* <img
+                      <img
                         src={embed.thumbnail.url}
                         className="opacity-0 transition-opacity"
                         onLoad={(e) => {
                           e.currentTarget.classList.remove("opacity-0")
                         }}
                         alt=""
-                      /> */}
+                      />
                     </div>
                   )}
                 </a>
@@ -46,14 +46,14 @@ export default function DiscordPost({ post }) {
             {post.attachments.map((attachment) => (
               <a href={attachment.url} key={attachment.url} target="_blank">
                 <div className=" bg-[#2b2d31] rounded border-l-4 p-4 border-zinc-900 text-[#1daaf9]">
-                  {/* <img
+                  <img
                     src={attachment.url}
                     className="opacity-0 transition-opacity"
                     onLoad={(e) => {
                       e.currentTarget.classList.remove("opacity-0")
                     }}
                     alt=""
-                  /> */}
+                  />
                   {attachment.filename}
                 </div>
               </a>
