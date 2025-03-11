@@ -211,6 +211,8 @@ export default function Page() {
         <br />
         <br />DESIGN
         <br />JON LUCAS
+        <br />
+        <br />2018
       </div>
     </>
   )
