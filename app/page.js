@@ -17,7 +17,7 @@ export default async function Main() {
       </div>
       <Nav data={data} />
       <FeaturedPost featured={data.featured} />
-      <a href="/">
+      <a href="/logo">
         <Logo />
       </a>
       <Aggregate data={data} />
