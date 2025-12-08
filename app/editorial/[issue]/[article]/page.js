@@ -6,8 +6,11 @@ import Footer from "../../../components/Footer"
 import Nav from "../../../components/Nav"
 
 export default async function Page({ params }) {
+  const resolved = await params;
+  const { issue, article } = resolved;
+
   const response = await fetch(
-    `https://assets.newmodels.io/editorial/${params.issue}/${params.article}.json`,
+    `https://assets.newmodels.io/editorial/${issue}/${article}.json`,
     {
       next: { tags: ["kirby"] },
     }
