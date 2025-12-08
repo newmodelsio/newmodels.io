@@ -1,4 +1,4 @@
-import "./globals.css"
+import "./globals.css";
 import "./modifiers.css"
 import { GoogleAnalytics } from "@next/third-parties/google"
 

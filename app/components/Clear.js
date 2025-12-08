@@ -1,6 +1,8 @@
 import Block from "./Block"
 
 export default function ClearMinimal({ data }) {
+
+  // console.log(data.columnA)
   return (
     <>
       <div className="grid md:grid-cols-3 divide-x">
