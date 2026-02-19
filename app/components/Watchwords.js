@@ -38,29 +38,27 @@ Key aspects of neo-orality include:
     },
     {
       "term": "recusandae",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quasi vel. Beatae illum, dolor id voluptatem totam cumque delectus maxime asperiores, quisquam dolorum numquam quibusdam minus, consequatur amet saepe corporis?"
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.<br/><br/>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor."
     },
     {
       "term": "adipisicing",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quasi vel. Beatae illum, dolor id voluptatem totam cumque delectus maxime asperiores, quisquam dolorum numquam quibusdam minus, consequatur amet saepe corporis?"
-
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.<br/><br/>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor."
     },
     {
       "term": "voluptate",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quasi vel. Beatae illum, dolor id voluptatem totam cumque delectus maxime asperiores, quisquam dolorum numquam quibusdam minus, consequatur amet saepe corporis?"
-
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.<br/><br/>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor."
     },
     {
       "term": "reiciendis",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quasi vel. Beatae illum, dolor id voluptatem totam cumque delectus maxime asperiores, quisquam dolorum numquam quibusdam minus, consequatur amet saepe corporis?"
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.<br/><br/>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor."
     },
     {
       "term": "Beatae illum",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quasi vel. Beatae illum, dolor id voluptatem totam cumque delectus maxime asperiores, quisquam dolorum numquam quibusdam minus, consequatur amet saepe corporis?"
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.<br/><br/>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor."
     },
     {
       "term": "corporis",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quasi vel. Beatae illum, dolor id voluptatem totam cumque delectus maxime asperiores, quisquam dolorum numquam quibusdam minus, consequatur amet saepe corporis?"
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.<br/><br/>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor."
     },
   ]
 
@@ -77,9 +75,11 @@ Key aspects of neo-orality include:
         <div className="flex flex-wrap gap-2 my-5">
           {data.slice(0, limit).map((item) =>
             <div onClick={() => { setActive(item.term); setExpand(false) }}
-              className={`${active == item.term && 'border-black!'} cursor-pointer p-2 px-3 leading-none rounded-full border hover:border-zinc-300!`}>{item.term}</div>
+              className={`${active == item.term ? 'border-black!' : 'hover:border-zinc-300!'} cursor-pointer p-2 px-3 leading-none rounded-full border `}>{item.term}</div>
           )}
-          <div onClick={() => setLimit(10)} className="cursor-pointer p-2 px-3 leading-none rounded-full border hover:border-zinc-300!">+</div>
+          {limit < 7 &&
+            <div onClick={() => setLimit(10)} className="cursor-pointer p-2 px-3 leading-none rounded-full border hover:border-zinc-300!">+</div>
+          }
         </div>
         <div className={`${expand ? '' : 'h-[200px]'} relative  overflow-hidden`}>
 
@@ -94,6 +94,8 @@ Key aspects of neo-orality include:
           }
         </div>
       </div>
+
+      <div className="border-b"></div>
 
     </>
   )
