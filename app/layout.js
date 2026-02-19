@@ -7,7 +7,7 @@ const date = new Date().toLocaleDateString("en-gb", {
 })
 
 export const metadata = {
-  title: "NEW MODELS " + date + "®",
+  title: "DEV",
   description:
     "NEW MODELS is a media channel and community addressing the emergent effects of networked technology on culture.",
 }
