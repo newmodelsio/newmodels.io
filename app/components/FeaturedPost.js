@@ -10,7 +10,7 @@ export default function FeaturedPost({ featured }) {
         <div className="flex justify-center my-10">
           <div className="max-w-xl">
             <a href={featured.link} target="_blank">
-              {/* {isGif ?
+              {isGif ?
                 <img
                   src={featured.thumbnail}
                   alt=""
@@ -23,7 +23,7 @@ export default function FeaturedPost({ featured }) {
                   height={800}
                   priority
                 />
-              } */}
+              }
 
               <div className="flex text-center">
                 <div
