@@ -20,7 +20,9 @@ export default function Clear({ data }) {
       <div className="p-5 md:border-t">
         <strong>NEWSSTAND</strong>
         <div className="columns-2 md:columns-3">
-          <PortableText value={data.newsstand[0].body} />
+          {data.newsstand?.[0]?.body && (
+            <PortableText value={data.newsstand[0].body} />
+          )}
         </div>
       </div>
     </>
