@@ -12,26 +12,32 @@ export const footer = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'body',
-      title: 'Text',
+      name: 'links',
+      title: 'Links',
       type: 'array',
-      of: [{ type: 'block' }],
-    }),
-    defineField({
-      name: 'bioImage',
-      title: 'Image',
-      type: 'image',
-    }),
-    defineField({
-      name: 'contact',
-      title: 'Contact',
-      type: 'email',
-    }),
-    defineField({
-      name: 'clients',
-      title: 'Clients',
-      type: 'array',
-      of: [{ type: 'block' }],
+      of: [
+        {
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'text',
+              title: 'Text',
+              type: 'string',
+            }),
+            defineField({
+              name: 'url',
+              title: 'Url',
+              type: 'url',
+            }),
+          ],
+          preview: {
+            select: {
+              title: 'text',
+              subtitle: 'url',
+            },
+          },
+        },
+      ],
     }),
   ],
 })

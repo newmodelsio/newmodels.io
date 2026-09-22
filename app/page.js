@@ -1,6 +1,3 @@
-
-
-
 import Logo from "./components/Logo"
 import FeaturedPost from "./components/FeaturedPost"
 import Aggregate from "./components/Aggregate"
@@ -25,6 +22,16 @@ async function getData() {
         title,
         body
       },
+      "about": *[_type == "about"] {
+        _id,
+        title,
+        body
+      },
+      "footer": *[_type == "footer"] {
+        _id,
+        title,
+        links[]
+      },
       "columns": *[_type == "column"] | order(orderRank asc) {
         _id,
         title,
@@ -42,7 +49,10 @@ async function getData() {
         }
       }
     }
-`)
+`, {},
+    {
+      next: { tags: ['sanity'] }
+    })
 }
 
 export default async function Main() {
@@ -55,6 +65,9 @@ export default async function Main() {
         <div className="w-[300px] h-[100px] bg-black"></div>
       </div>
 
+
+      <Nav data={data} />
+
       <FeaturedPost featured={data.featured[0]} />
 
       <a href="/logo">
@@ -63,11 +76,7 @@ export default async function Main() {
 
       <Aggregate data={data} />
 
-      {/* <Nav data={data} />
-     
-    
-      
-      <Footer data={data} /> */}
+      <Footer data={data} />
     </>
   )
 }

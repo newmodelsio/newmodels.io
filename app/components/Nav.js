@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Block from "./Block"
+import { PortableText } from "next-sanity"
 
 export default function Nav({ data }) {
   const [toggleNav, setToggleNav] = useState(false)
@@ -57,9 +58,10 @@ export default function Nav({ data }) {
           </div>
           <div className="bg-white slideIn ease-in-out w-full md:w-1/3 h-screen fixed top-0 right-0 z-20 p-5 md:p-10 flex flex-col gap-5 overflow-y-scroll border-l">
             <div className="flex flex-col gap-5">
-              {data.about.map((block) => (
+              <PortableText value={data.about[0].body} />
+              {/* {data.about.map((block) => (
                 <Block key={block.id} block={block} />
-              ))}
+              ))} */}
             </div>
           </div>
         </>
