@@ -3,6 +3,8 @@
 import { useState } from "react"
 
 import Block from "./Block"
+import Post from "./Post"
+import { PortableText } from "next-sanity"
 
 export default function Section({ section }) {
   const [offset, setOffset] = useState(3)
@@ -18,12 +20,13 @@ export default function Section({ section }) {
                 className="text-zinc-400 leading-snug"
                 dangerouslySetInnerHTML={{ __html: section.description }}
               ></div>
+              <PortableText value={section.body} />
             </div>
           )}
           {section.posts && (
             <>
-              {section.posts.slice(0, offset).map((block) => (
-                <Block key={block.id} block={block} />
+              {section.posts.slice(0, offset).map((post) => (
+                <Post key={post.title} post={post} />
               ))}
               {section.posts.length > 3 && (
                 <div>

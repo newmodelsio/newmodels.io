@@ -1,3 +1,5 @@
+'use client'
+
 import DiscordPost from "../components/DiscordPost"
 import DiscordSubmit from "../components/DiscordSubmit"
 import { useState, useEffect } from "react"

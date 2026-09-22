@@ -22,7 +22,7 @@ export default function Toggle({ toggle, setToggle }) {
         >
           Dark
         </div>
-        <div
+        {/* <div
           className={
             toggle == "Archive"
               ? "p-3 px-4 rounded text-zinc-700 bg-white shadow-sm"
@@ -31,7 +31,7 @@ export default function Toggle({ toggle, setToggle }) {
           onClick={() => setToggle("Archive")}
         >
           Archive
-        </div>
+        </div> */}
       </div>
     </div>
   )

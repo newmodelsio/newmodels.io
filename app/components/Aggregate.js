@@ -6,11 +6,12 @@ import Search from "../components/Search"
 import { useState } from "react"
 import Clear from "../components/Clear"
 
-export default function AltAggregate({ data }) {
+export default function Aggregate({ data }) {
   const [toggle, setToggle] = useState("Clear")
 
   return (
     <>
+      {/* <Clear data={data} /> */}
       <Toggle toggle={toggle} setToggle={setToggle} />
       {(() => {
         switch (toggle) {

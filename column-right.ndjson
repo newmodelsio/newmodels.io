@@ -1,0 +1,77 @@
+<div class="section flex flex-col gap-5 border-b pb-5">
+    <div>
+        <div class="font-bold uppercase">NM PROJECTS</div>
+        <div class="text-zinc-400 leading-snug">
+            <p>NM COLLABS &amp; COMMUNITY OUTPUT</p>
+        </div>
+    </div>
+    <div class="block">
+        <div class="hover:underline"><a href="https://shop.newmodels.io/product/nm-codex-y2k20" target="_blank"
+                class="">
+                <div>
+                    <p><strong>NM Y2K20 CODEX</strong> 📒<em> </em>– led by @leith, @mgr, @phm, @orfhtiff, @sah_raw,
+                        @_will, @ja_ak_rtgr, @<strong>h̷a̷y̷w̷i̷r̷e̷z̶</strong>, </p>
+                </div>
+            </a></div>
+    </div>
+    <div class="block">
+        <div class="hover:underline"><a href="https://webdex-y2k20.newmodels.io/" target="_blank" class="">
+                <div class="w-[125px] aspect-square bg-zinc-100 mb-1"><img
+                        class="w-full h-full object-cover opacity-0 transition-opacity" alt=""
+                        src="https://assets.newmodels.io/media/pages/home/5734d43c64-1726673350/webdex_promoview2_sm-300x.jpg">
+                </div>
+                <div>
+                    <p><strong>NM Y2K20 WEBDEX</strong> – @phm, @_will, @bradley, @dan, @davidy, @gristleism,
+                        @ja_ak_rtgr, @jakuby, @jord0, @leïth, @localhost96, @mgr, @eclectictasteofbot &amp; general NM
+                        Community</p>
+                </div>
+            </a></div>
+    </div>
+    <div class="block">
+        <div class="hover:underline"><a href="https://newmodels.io/editorial/issue-2/decade-brain-nm-x-bjarne-melgaard"
+                target="_blank" class="">
+                <div>
+                    <p><strong>DECADE BRAIN</strong> – NM x Bjarne Melgaard<strong> </strong>(2020)</p>
+                </div>
+            </a></div>
+    </div>
+    <div class="block">
+        <div class="hover:underline"><a
+                href="https://docs.google.com/spreadsheets/d/1jLHDuT0hrSYchGKhAJxb1YRIFeXZdFyOTPdBOyoqRT8/edit?usp=sharing"
+                target="_blank" class="">
+                <div>
+                    <p><strong>DECADE BRAIN SOURCE LIST</strong> – NM Community<strong> </strong>(2020)</p>
+                </div>
+            </a></div>
+    </div>
+    <div class="block">
+        <div class="hover:underline"><a href="" target="_blank" class="">
+                <div class="w-[125px] aspect-square bg-zinc-100 mb-1"><img
+                        class="w-full h-full object-cover opacity-0 transition-opacity" alt=""
+                        src="https://assets.newmodels.io/media/pages/home/a87a292dcc-1724252837/codexposter-bigcartel-300x.jpg">
+                </div>
+                <div>
+                    <p><strong>NM Y2K20 COMPRESSION MAP</strong> – Jak Ritger &amp; NM Community</p>
+                </div>
+            </a></div>
+    </div>
+    <div class="block">
+        <div class="hover:underline"><a href="https://newmodels.io/editorial/issue-2/astroturfs-of-offense-glossary"
+                target="_blank" class="">
+                <div>
+                    <p><strong>ASTROTURFS of OFFENSE GLOSSARY</strong> – SUS (2020)</p>
+                </div>
+            </a></div>
+    </div>
+    <div class="block">
+        <div class="hover:underline"><a href="https://www.highsnobiety.com/p/new-models-internet-perfume/"
+                target="_blank" class="">
+                <div>
+                    <p><strong>"THE INTERNET" PERFUME</strong> – NM x Society of Scent for Highsnobiety (2021)</p>
+                </div>
+            </a></div>
+    </div>
+    <div>
+        <div class="flex items-center justify-end cursor-pointer text-zinc-800 uppercase text-[10px]">Hide</div>
+    </div>
+</div>

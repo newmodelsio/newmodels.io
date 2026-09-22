@@ -5,6 +5,8 @@ import Section from "./Section"
 import Post from "./Post"
 
 export default function Block({ block }) {
+
+  console.log(block)
   return (
     <>
       <div className="block" key={block.id}>
