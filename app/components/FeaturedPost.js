@@ -14,6 +14,7 @@ export default function FeaturedPost({ featured }) {
                 <img
                   src={featured.thumbnail}
                   alt=""
+                  fetchpriority="high"
                 />
                 :
                 <Image
@@ -22,6 +23,7 @@ export default function FeaturedPost({ featured }) {
                   width={800}
                   height={800}
                   priority
+                  fetchPriority="high"
                 />
               }
 
