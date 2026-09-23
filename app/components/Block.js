@@ -15,7 +15,7 @@ export default function Block({ block }) {
             case "text":
               return (
                 <div
-                  className={block.modifiers}
+                  className={`${block.modifiers} leading-[1.55]`}
                   dangerouslySetInnerHTML={{ __html: block.text }}
                 ></div>
               )

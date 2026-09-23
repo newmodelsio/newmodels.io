@@ -99,6 +99,7 @@ export default function Logo() {
       x="0px"
       y="0px"
       viewBox="0 0 1569.6 263.1"
+      aria-label="New Models"
     >
       <g>
         <path
