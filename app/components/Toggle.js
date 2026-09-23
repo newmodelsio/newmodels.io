@@ -6,7 +6,7 @@ export default function Toggle({ toggle, setToggle }) {
           className={
             toggle == "Clear"
               ? "p-3 px-4 rounded text-zinc-700 bg-white shadow-sm"
-              : "p-3 px-4 rounded text-zinc-400"
+              : "p-3 px-4 rounded "
           }
           onClick={() => setToggle("Clear")}
         >
@@ -16,7 +16,7 @@ export default function Toggle({ toggle, setToggle }) {
           className={
             toggle == "Dark"
               ? "p-3 px-4 rounded text-zinc-700 bg-white shadow-sm"
-              : "p-3 px-4 rounded text-zinc-400"
+              : "p-3 px-4 rounded "
           }
           onClick={() => setToggle("Dark")}
         >
@@ -26,7 +26,7 @@ export default function Toggle({ toggle, setToggle }) {
           className={
             toggle == "Archive"
               ? "p-3 px-4 rounded text-zinc-700 bg-white shadow-sm"
-              : "p-3 px-4 rounded text-zinc-400"
+              : "p-3 px-4 rounded "
           }
           onClick={() => setToggle("Archive")}
         >

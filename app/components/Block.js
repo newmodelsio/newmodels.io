@@ -24,10 +24,10 @@ export default function Block({ block }) {
                 <div className="flex flex-wrap">
                   {block.link ? (
                     <a href={block.link} target="_blank">
-                      <img className="w-full" src={block.src} alt="" />
+                      <img className="w-full" src={block.src} alt="Decorative image" />
                     </a>
                   ) : (
-                    <img className="w-full" src={block.src} alt="" />
+                    <img className="w-full" src={block.src} alt="Decorative image" />
                   )}
                   {block.caption && (
                     <div
